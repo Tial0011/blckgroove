@@ -1,0 +1,66 @@
+<!--
+  BLCKGROOVE navbar component.
+  Loaded into #navbar-root by js/navbar.js via fetch().
+  Keep this file as the single source of truth for nav markup —
+  edit here, not inline in index.html.
+-->
+<nav class="navbar" id="navbar" data-navbar>
+  <div class="navbar__inner">
+    <a href="#top" class="navbar__brand" aria-label="BLCKGROOVE home">
+      <img
+        src="assets/logo/blckgroove-logo.jpeg"
+        alt="BLCKGROOVE Entertainment"
+        class="navbar__logo"
+      />
+    </a>
+
+    <ul class="navbar__links">
+      <li><a href="#about" class="navbar__link" data-nav-link>About</a></li>
+      <li><a href="#temptation" class="navbar__link" data-nav-link>Temptation</a></li>
+      <li><a href="#experience" class="navbar__link" data-nav-link>Experience</a></li>
+      <li><a href="#gallery" class="navbar__link" data-nav-link>Gallery</a></li>
+    </ul>
+
+    <a href="#tickets" class="navbar__cta">
+      Get Tickets
+      <span class="navbar__cta-arrow" aria-hidden="true">↗</span>
+    </a>
+
+    <button
+      type="button"
+      class="navbar__trigger"
+      data-menu-trigger
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open menu"
+    >
+      <span class="navbar__trigger-bars" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      Menu
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+  <button
+    type="button"
+    class="mobile-menu__close"
+    data-menu-close
+    aria-label="Close menu"
+  >
+    Close
+  </button>
+
+  <ul class="mobile-menu__links">
+    <li><a href="#about" class="mobile-menu__link" data-mobile-link>About</a></li>
+    <li><a href="#temptation" class="mobile-menu__link" data-mobile-link>Temptation</a></li>
+    <li><a href="#experience" class="mobile-menu__link" data-mobile-link>Experience</a></li>
+    <li><a href="#gallery" class="mobile-menu__link" data-mobile-link>Gallery</a></li>
+  </ul>
+
+  <a href="#tickets" class="mobile-menu__cta" data-mobile-link>
+    Get Tickets
+    <span aria-hidden="true">↗</span>
+  </a>
+</div>

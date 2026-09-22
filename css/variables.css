@@ -1,0 +1,69 @@
+/* ==========================================================================
+   BLCKGROOVE — Design Tokens
+   Single source of truth for color, type, spacing, motion and z-index.
+   Palette pulled from the brand mark + TEMPTATION event materials:
+   near-black ground, two reds (a deep base red and a hot signal red),
+   warm white, and a chrome/silver ramp reserved for special event moments.
+   ========================================================================== */
+
+:root {
+  /* ---- Color: ground ---- */
+  --color-void: #08080a;         /* page background */
+  --color-black: #0e0e11;        /* base surface */
+  --color-black-raised: #17171b; /* navbar surface once scrolled */
+  --color-black-line: #2a2a30;   /* hairline borders on dark */
+
+  /* ---- Color: red ---- */
+  --color-red-deep: #6b0f14;     /* shadow / low-emphasis red */
+  --color-red: #b3121a;          /* brand red, mid */
+  --color-red-hot: #e3202b;      /* accent / hover / CTA */
+  --color-red-hot-dim: rgba(227, 32, 43, 0.35);
+
+  /* ---- Color: neutral ---- */
+  --color-white: #f6f4f2;
+  --color-bone: #cfccc8;         /* secondary text on dark */
+  --color-fog: #86848a;          /* tertiary / muted text */
+
+  /* ---- Color: chrome (reserved for event-specific flourishes) ---- */
+  --chrome-1: #f2f2f4;
+  --chrome-2: #b9b9bf;
+  --chrome-3: #6f6f76;
+  --gradient-chrome: linear-gradient(155deg, var(--chrome-1) 0%, var(--chrome-3) 45%, var(--chrome-1) 70%, var(--chrome-2) 100%);
+
+  /* ---- Type ---- */
+  --font-display: 'Bebas Neue', 'Oswald', sans-serif;   /* reserved for hero/event display text */
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --nav-link-size: 0.92rem;
+  --nav-link-tracking: 0.08em;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* ---- Layout ---- */
+  --nav-height: 88px;
+  --nav-height-scrolled: 64px;
+  --content-max: 1280px;
+  --edge-padding: clamp(20px, 5vw, 64px);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-mid: 320ms;
+  --duration-slow: 480ms;
+
+  /* ---- Elevation ---- */
+  --shadow-nav: 0 8px 30px rgba(0, 0, 0, 0.35);
+
+  /* ---- Z-index scale ---- */
+  --z-nav: 1000;
+  --z-mobile-menu: 1100;
+}
