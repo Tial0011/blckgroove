@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/brand-statement.css" />
   <link rel="stylesheet" href="css/memories.css" />
+  <link rel="stylesheet" href="css/temptation.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -53,7 +54,7 @@
       </div>
     </section>
 
-    <section class="brand-statement" aria-label="BLCKGROOVE brand statement" data-brand-statement>
+    <section class="brand-statement" id="about" aria-label="BLCKGROOVE brand statement" data-brand-statement>
       <svg width="0" height="0" aria-hidden="true" style="position:absolute">
         <defs>
           <filter id="brand-white-ink" color-interpolation-filters="sRGB">
@@ -110,7 +111,7 @@
             <p class="memories__video-status" role="status"></p>
           </div>
         </div>
-        <div class="memories__wall">
+        <div class="memories__wall" id="gallery">
           <div class="memories__wall-heading"><h3>MORE <em>MOMENTS</em></h3><span>STEEZE AFTER STRESS / JULY 2026</span></div>
           <div class="memories__grid">
             <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 1 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 1" loading="lazy" decoding="async" /><span aria-hidden="true">01 &nearr;</span></button>
@@ -134,10 +135,53 @@
       </dialog>
     </section>
 
-    <section id="about" style="height: 100vh;"></section>
-    <section id="temptation" style="height: 100vh;"></section>
-    <section id="experience" style="height: 100vh;"></section>
-    <section id="gallery" style="height: 100vh;"></section>
+    <section class="temptation" id="temptation" aria-labelledby="temptation-title">
+      <div class="temptation__inner">
+        <header class="temptation__reveal" data-temptation-reveal>
+          <p class="temptation__eyebrow">02 / THE NEXT CHAPTER</p>
+          <h2 class="temptation__title" id="temptation-title">TEMPTATION</h2>
+          <div class="temptation__title-caption"><span>A BLCKGROOVE EXPERIENCE</span><span>ONDO CITY / 2026</span></div>
+          <p class="temptation__motto">BE TEMPTED.<br /><em>NOT EXEMPTED.</em></p>
+        </header>
+        <div class="temptation__invitation" data-temptation-reveal>
+          <span class="temptation__line" aria-hidden="true"></span>
+          <p>There are nights you attend.<br />And then there are nights<br /><em>you surrender to.</em></p>
+        </div>
+        <figure class="temptation__visual" data-temptation-reveal>
+          <img src="assets/hero/flyer-atmosphere.webp" alt="Red light washes over a crowd gathered around the music" loading="lazy" decoding="async" width="1672" height="941" />
+          <div class="temptation__visual-type" aria-hidden="true">GIVE IN<br /><i>TO THE NIGHT.</i></div>
+          <figcaption>THE MUSIC. THE MYSTERY. THE MOMENT.</figcaption>
+        </figure>
+        <div class="temptation__story" data-temptation-reveal>
+          <p class="temptation__eyebrow">AN INVITATION TO FEEL SOMETHING</p>
+          <p>TEMPTATION is BLCKGROOVE&rsquo;s next immersive experience. A night shaped by music, charged with energy and wrapped in mystery. Step into the atmosphere. Let the unexpected find you.</p>
+        </div>
+        <div class="temptation__date" data-temptation-reveal>
+          <div><p class="temptation__eyebrow">SAVE THE NIGHT</p><p class="temptation__date-title"><time datetime="2026-11-13T21:00:00+01:00">NOVEMBER 13, 2026</time></p><p class="temptation__location">9PM &middot; DSERIES &middot; ONDO CITY</p></div>
+          <a class="temptation__cta" href="#tickets">GET TICKETS <span aria-hidden="true">&nearr;</span></a>
+        </div>
+        <section class="temptation__experience" id="experience" aria-labelledby="experience-title">
+          <div data-temptation-reveal><h3 class="temptation__eyebrow" id="experience-title">THE EXPERIENCE</h3><p class="temptation__dress">Come curious.<br />Come dressed for the occasion.<br /><em>Come ready for the moment.</em></p></div>
+          <ol class="temptation__elements">
+            <li data-temptation-reveal><span>01</span>MUSIC</li><li data-temptation-reveal><span>02</span>ATMOSPHERE</li><li data-temptation-reveal><span>03</span>ENERGY</li><li data-temptation-reveal><span>04</span>THE UNEXPECTED</li>
+          </ol>
+        </section>
+        <section class="temptation__tickets" id="tickets" aria-labelledby="tickets-title">
+          <header class="temptation__ticket-heading" data-temptation-reveal><div><p class="temptation__eyebrow">YOUR WAY INTO THE NIGHT</p><h3 id="tickets-title">CHOOSE YOUR <em>ACCESS.</em></h3></div><span>ONE NIGHT. FOUR WAYS IN.</span></header>
+          <ol class="temptation__access">
+            <li data-temptation-reveal><span class="temptation__number">01</span><div><h4>THE TEASE</h4><p>Regular Access</p></div><p class="temptation__access-note">Step into the temptation.</p><p class="temptation__price">&#8358;4,000</p></li>
+            <li data-temptation-reveal><span class="temptation__number">02</span><div><h4>TEMPTED 4</h4><p>Group Access &middot; 4 People</p></div><p class="temptation__access-note">Four tempted. One night.</p><p class="temptation__price">&#8358;15,000</p></li>
+            <li data-temptation-reveal><span class="temptation__number">03</span><div><h4>THE LAST CALL</h4><p>Late Access</p></div><p class="temptation__access-note">The night is still calling.</p><p class="temptation__price">&#8358;7,000</p></li>
+            <li data-temptation-reveal><span class="temptation__number">04</span><div><h4>THE INDULGENCE</h4><p>VIP / Reserved Section</p></div><p class="temptation__access-note">Make the moment your own.</p><p class="temptation__price">&#8358;50,000</p></li>
+          </ol>
+          <div class="temptation__booking" data-temptation-reveal>
+            <div><h4>YOUR ACCESS STARTS HERE.</h4><p>Choose your access above. Pay by bank transfer, then send your receipt and chosen ticket option to us on WhatsApp for confirmation.</p><p class="temptation__bank-status">Bank details will be added soon.</p><p>Receipt confirmation: <a href="https://wa.me/2348121234627" target="_blank" rel="noopener noreferrer">+234 812 123 4627</a></p></div>
+            <a class="temptation__cta" href="https://wa.me/2348121234627?text=Hi%20BLCKGROOVE%2C%20I%20would%20like%20to%20confirm%20my%20TEMPTATION%20ticket.%20I%20will%20attach%20my%20payment%20receipt%20and%20chosen%20ticket%20option." target="_blank" rel="noopener noreferrer">SEND RECEIPT ON WHATSAPP <span aria-hidden="true">&nearr;</span></a>
+          </div>
+        </section>
+        <footer class="temptation__ending" data-temptation-reveal><p class="temptation__eyebrow">NOVEMBER 13. THE NIGHT IS YOURS.</p><p class="temptation__question">WILL<br /><span>YOU</span><br /><em>RESIST?</em></p><a href="#tickets" class="temptation__last-link">GIVE IN TO TEMPTATION <span aria-hidden="true">&nearr;</span></a></footer>
+      </div>
+    </section>
   </main>
 
   <!-- Footer is injected here by js/footer.js from components/footer.html -->
@@ -149,6 +193,7 @@
   <script src="js/hero.js"></script>
   <script src="js/brand-statement.js"></script>
   <script src="js/memories.js"></script>
+  <script src="js/temptation.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

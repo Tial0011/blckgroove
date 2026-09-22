@@ -1,0 +1,81 @@
+.temptation { background: #070709; overflow: hidden; position: relative; padding-top: clamp(100px, 15vw, 220px); }
+.temptation::before { content: ''; position: absolute; inset: 0 0 auto; height: 1000px; pointer-events: none; background: radial-gradient(ellipse at 50% 38%, #520e193b, transparent 65%); }
+.temptation__inner { position: relative; max-width: 1440px; padding: 0 var(--edge-padding); margin: auto; }
+.temptation p, .temptation h2, .temptation h3, .temptation h4, .temptation figure { margin: 0; }
+.temptation__eyebrow { font: 700 .66rem/1.7 var(--font-body); letter-spacing: .2em; color: #e3707c; }
+.temptation__reveal { text-align: center; }
+.temptation .temptation__title { margin-top: 38px; padding: 0 .03em .08em 0; font: italic 400 clamp(3.1rem, 15.3vw, 220px)/.95 var(--font-display); letter-spacing: -.045em; color: #dedee3; background: linear-gradient(174deg, #fff 8%, #b7b7c1 28%, #555561 43%, #f7f5fa 49%, #babac3 57%, #73737e 73%, #ededf3 90%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.temptation__title-caption { display: flex; justify-content: space-between; font-size: .58rem; letter-spacing: .18em; color: #a29ca4; border-top: 1px solid #514049; padding-top: 16px; }
+.temptation .temptation__motto { margin: 90px auto 0; font: 400 clamp(2.5rem, 5.7vw, 5rem)/1 var(--font-display); letter-spacing: .015em; }
+.temptation__motto em { color: #a8a3ad; font-style: normal; }
+.temptation__invitation { text-align: center; margin: 70px auto 80px; font-size: clamp(1rem, 1.8vw, 1.35rem); line-height: 1.9; color: #aaa5af; }
+.temptation__invitation em { font-family: Georgia, serif; color: #ede6ea; font-size: 1.2em; }
+.temptation__line { display: block; height: 65px; width: 1px; background: linear-gradient(#8e283c, transparent); margin: 0 auto 38px; }
+.temptation__visual { position: relative; aspect-ratio: 16/9; overflow: hidden; isolation: isolate; background: #240a10; }
+.temptation__visual img { width: 100%; height: 100%; object-fit: cover; opacity: .72; }
+.temptation__visual::after { content: ''; position: absolute; inset: 0; z-index: 0; background: linear-gradient(0deg, #08080ae6, transparent 60%), linear-gradient(90deg, #08080a70, transparent); }
+.temptation__visual-type { position: absolute; z-index: 1; left: 6%; top: 24%; font: 400 clamp(2.4rem, 7.6vw, 7rem)/.96 var(--font-display); letter-spacing: -.02em; }
+.temptation__visual-type i { color: #ded3d8; }
+.temptation__visual figcaption { position: absolute; z-index: 1; bottom: 7%; left: 6%; font-size: .6rem; letter-spacing: .2em; }
+.temptation__story { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12%; margin: 64px 0 100px; }
+.temptation__story > p:last-child { font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.9; color: #c1bbc4; max-width: 580px; }
+.temptation__date { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-block: 1px solid #34252d; padding: 44px 0; }
+.temptation .temptation__date-title { font: 400 clamp(2.3rem, 4.7vw, 4.2rem)/1.1 var(--font-display); margin: 12px 0; }
+.temptation__location { font-size: .72rem; font-weight: 600; letter-spacing: .15em; color: #b8b2bd; }
+.temptation__cta { display: inline-flex; justify-content: space-between; align-items: center; gap: 40px; min-height: 54px; padding: 18px 24px; background: #761729; border: 1px solid #a34959; font-size: .68rem; font-weight: 800; letter-spacing: .1em; transition: background .25s, transform .25s; }
+.temptation__cta:hover { background: #982238; transform: translateY(-2px); }
+.temptation__cta span { font-size: 1.3rem; }
+.temptation__experience { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12%; padding: 140px 0; }
+.temptation .temptation__dress { margin-top: 36px; font-size: .85rem; line-height: 2; color: #b8b2bd; }
+.temptation__dress em { color: #ede6ea; font-style: normal; }
+.temptation__elements, .temptation__access { list-style: none; padding: 0; margin: 0; }
+.temptation__elements li { border-bottom: 1px solid #30252c; padding: 18px 0; font: 400 clamp(1.9rem, 4.2vw, 3.8rem)/1.1 var(--font-display); display: flex; align-items: center; gap: 22px; }
+.temptation__elements li:first-child { padding-top: 0; }
+.temptation__elements li span, .temptation__number { font: 600 .65rem/1 var(--font-body); color: #dd6e7c; letter-spacing: .1em; }
+.temptation__ticket-heading { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 40px; }
+.temptation__ticket-heading h3 { font: 400 clamp(2.5rem, 5vw, 4.8rem)/1.1 var(--font-display); margin-top: 14px; }
+.temptation__ticket-heading h3 em { font-style: normal; color: #aaa6b0; }
+.temptation__ticket-heading > span { color: #aaa5af; font-size: .6rem; letter-spacing: .12em; padding-bottom: 8px; }
+.temptation__access li { display: grid; grid-template-columns: 35px 1.1fr 1fr auto; gap: 24px; align-items: center; border-top: 1px solid #3c2a34; padding: 34px 8px; transition: background .3s; }
+.temptation__access li:last-child { border-bottom: 1px solid #3c2a34; }
+.temptation__access li:hover { background: #35121a40; }
+.temptation__access h4 { font: 400 clamp(1.7rem, 3vw, 2.6rem)/1.1 var(--font-display); }
+.temptation__access li div p { color: #b5aeb9; font-size: .73rem; margin-top: 9px; }
+.temptation__access-note { font: italic .95rem/1.6 Georgia, serif; color: #ada3ad; }
+.temptation__price { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 500; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.temptation__booking { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 30px; }
+.temptation__booking > div { max-width: 550px; }
+.temptation__booking h4 { font: 400 1.8rem/1.2 var(--font-display); margin-bottom: 14px; }
+.temptation__booking p { font-size: .78rem; line-height: 1.8; color: #b8b2bd; }
+.temptation__booking .temptation__bank-status { color: #e3707c; margin: 12px 0; }
+.temptation__booking p a { text-decoration: underline; text-underline-offset: 3px; }
+.temptation__booking .temptation__cta { flex-shrink: 0; gap: 18px; }
+.temptation__ending { text-align: center; padding: 160px 0 110px; background: radial-gradient(ellipse at 50% 62%, #50122544, transparent 62%); }
+.temptation .temptation__question { font: 400 clamp(5rem, 14vw, 12rem)/.83 var(--font-display); letter-spacing: -.035em; margin: 48px 0 40px; }
+.temptation__question span { color: #918993; }
+.temptation__question em { color: #d4c9d2; font-style: italic; }
+.temptation__last-link { display: inline-flex; gap: 24px; align-items: center; min-height: 44px; color: #e3707c; font-size: .65rem; font-weight: 700; letter-spacing: .16em; border-bottom: 1px solid #7b3445; }
+[data-temptation-reveal] { transition: opacity 1s ease, transform 1s cubic-bezier(.16,1,.3,1); }
+[data-temptation-reveal].is-unseen { opacity: 0; transform: translateY(32px); }
+@media (max-width: 760px) {
+  .temptation__title-caption { font-size: .46rem; letter-spacing: .08em; }
+  .temptation .temptation__motto { margin-top: 65px; }
+  .temptation__invitation { margin-block: 48px 54px; }
+  .temptation__visual { aspect-ratio: 4/5; }
+  .temptation__visual img { object-position: 65% center; }
+  .temptation__visual-type { font-size: 13vw; top: 40%; }
+  .temptation__visual figcaption { font-size: .5rem; letter-spacing: .1em; }
+  .temptation__story { grid-template-columns: 1fr; gap: 22px; margin: 36px 0 64px; }
+  .temptation__date { align-items: flex-start; flex-direction: column; }
+  .temptation__experience { grid-template-columns: 1fr; gap: 40px; padding: 80px 0; }
+  .temptation__ticket-heading { flex-direction: column; align-items: flex-start; }
+  .temptation__access li { grid-template-columns: 22px 1fr auto; gap: 12px; padding: 26px 0; }
+  .temptation__access-note { grid-column: 2 / -1; grid-row: 2; font-size: .85rem; }
+  .temptation__price { grid-column: 3; grid-row: 1; }
+  .temptation__booking { flex-direction: column; align-items: flex-start; }
+  .temptation__ending { padding: 110px 0 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-temptation-reveal], .temptation__cta, .temptation__access li { transition: none; }
+  [data-temptation-reveal].is-unseen { opacity: 1; transform: none; }
+}
