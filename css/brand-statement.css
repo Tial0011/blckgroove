@@ -1,0 +1,82 @@
+/* A two-screen scroll runway with a viewport-sized sticky composition. */
+.brand-statement {
+  height: 200vh;
+  height: 200svh;
+  background: var(--color-void);
+  position: relative;
+}
+.brand-statement__stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+}
+.brand-statement__light {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, #08080a, transparent 25%, transparent 75%, #08080a),
+    radial-gradient(ellipse at 72% 58%, rgba(107,15,20,.18), transparent 55%),
+    radial-gradient(ellipse at 30% 42%, rgba(220,220,230,.035), transparent 48%);
+}
+.brand-statement__stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' d='M0 0h180v180H0z'/%3E%3C/svg%3E");
+}
+.brand-statement__origin, .brand-statement__signature {
+  position: absolute;
+  margin: 0;
+  font-size: .6rem;
+  font-weight: 600;
+  line-height: 1.9;
+  letter-spacing: .18em;
+  color: #a49da3;
+}
+.brand-statement__origin { top: calc(var(--nav-height) + 32px); left: var(--edge-padding); }
+.brand-statement__signature { bottom: 48px; right: var(--edge-padding); text-align: right; }
+.brand-statement__reveal {
+  position: relative;
+  width: 100%;
+  mix-blend-mode: screen;
+  clip-path: inset(0 var(--brand-crop, 0%) 0 0);
+}
+.brand-statement__mark {
+  position: relative;
+  width: 108vw;
+  aspect-ratio: 3.5 / 1;
+  overflow: hidden;
+  transform: translate3d(var(--brand-x, -4vw), var(--brand-y, 0px), 0) scale(var(--brand-scale, 1));
+  transform-origin: center;
+  /* Preserve the supplied raster artwork; map its ink to white and paper to black. */
+}
+.brand-statement__mark img {
+  position: absolute;
+  width: 120%;
+  max-width: none;
+  height: auto;
+  left: -10%;
+  top: 50%;
+  transform: translateY(-43%);
+  filter: grayscale(1) contrast(8) invert(1) url('#brand-white-ink');
+}
+@media (max-width: 760px) {
+  .brand-statement { height: 165svh; }
+  .brand-statement__mark { width: 125vw; }
+  .brand-statement__origin { font-size: .52rem; }
+  .brand-statement__signature { bottom: 32px; font-size: .52rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-statement { height: 100svh; }
+  .brand-statement__stage { position: relative; }
+  .brand-statement__reveal { clip-path: none; }
+  .brand-statement__mark { width: 96vw; margin-inline: auto; transform: none; }
+}

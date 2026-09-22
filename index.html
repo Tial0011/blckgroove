@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/brand-statement.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -51,6 +52,31 @@
       </div>
     </section>
 
+    <section class="brand-statement" aria-label="BLCKGROOVE brand statement" data-brand-statement>
+      <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+        <defs>
+          <filter id="brand-white-ink" color-interpolation-filters="sRGB">
+            <feColorMatrix type="luminanceToAlpha" />
+            <feComponentTransfer>
+              <feFuncR type="linear" slope="0" intercept="1" />
+              <feFuncG type="linear" slope="0" intercept="1" />
+              <feFuncB type="linear" slope="0" intercept="1" />
+            </feComponentTransfer>
+          </filter>
+        </defs>
+      </svg>
+      <div class="brand-statement__stage">
+        <div class="brand-statement__light" aria-hidden="true"></div>
+        <p class="brand-statement__origin">EST. 2024 &mdash; ONDO CITY</p>
+        <div class="brand-statement__reveal">
+          <div class="brand-statement__mark">
+            <img src="assets/logo/blckgroove-logo.jpeg" alt="BLCKGROOVE Entertainment" width="1242" height="565" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <p class="brand-statement__signature">UNFILTERED ENTERTAINMENT.<br />WITH 1000% ENERGY.</p>
+      </div>
+    </section>
+
     <section id="about" style="height: 100vh;"></section>
     <section id="temptation" style="height: 100vh;"></section>
     <section id="experience" style="height: 100vh;"></section>
@@ -64,6 +90,7 @@
   <script src="js/mobile-menu.js"></script>
   <script src="js/footer.js"></script>
   <script src="js/hero.js"></script>
+  <script src="js/brand-statement.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
