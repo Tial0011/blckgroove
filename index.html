@@ -82,12 +82,12 @@
       <div class="memories__inner">
         <header class="memories__intro" data-reveal>
           <p class="memories__label">01 / PREVIOUS EXPERIENCE</p>
-          <h2 id="memories-title">WE&rsquo;VE BEEN<br />HERE BEFORE.</h2>
+          <h2 id="memories-title">WE&rsquo;VE BEEN<br />HERE <em>BEFORE.</em></h2>
           <p class="memories__subheading">AND WE&rsquo;RE JUST GETTING STARTED.</p>
         </header>
         <figure class="memories__feature" data-reveal>
           <img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg" alt="Guests enjoying the night at Steeze After Stress" loading="lazy" decoding="async" width="1242" height="839" />
-          <figcaption><h3>STEEZE AFTER STRESS</h3><p>JULY 2026 &middot; ONDO CITY</p></figcaption>
+          <figcaption><h3>STEEZE <span>AFTER STRESS</span></h3><p>JULY 2026 &middot; ONDO CITY</p></figcaption>
         </figure>
         <div class="memories__pair">
           <figure class="memories__support" data-reveal>
@@ -100,13 +100,18 @@
                 <source src="assets/videos/WhatsApp%20Video%202026-09-22%20at%2016.36.55.mp4" type="video/mp4" />
                 Your browser does not support this video.
               </video>
-              <button class="memories__play" type="button" hidden aria-label="Play the Steeze After Stress film"><span aria-hidden="true">&#9654;</span> PLAY THE FILM</button>
+              <button class="memories__play" type="button" hidden aria-label="Play the Steeze After Stress film"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M19 10 53 32 19 54Z" /></svg></button>
+              <button class="memories__sound" type="button" hidden aria-label="Enable sound" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z" /><path class="memories__sound-off" d="m16 9 6 6m0-6-6 6" /><path class="memories__sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" /></svg>
+                <span>Enable sound</span>
+              </button>
+              <input class="memories__seek" type="range" min="0" max="100" value="0" step="0.1" hidden aria-label="Seek through film" />
             </div>
             <p class="memories__video-status" role="status"></p>
           </div>
         </div>
         <div class="memories__wall">
-          <div class="memories__wall-heading"><h3>MORE MOMENTS</h3><span>STEEZE AFTER STRESS / JULY 2026</span></div>
+          <div class="memories__wall-heading"><h3>MORE <em>MOMENTS</em></h3><span>STEEZE AFTER STRESS / JULY 2026</span></div>
           <div class="memories__grid">
             <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 1 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 1" loading="lazy" decoding="async" /><span aria-hidden="true">01 &nearr;</span></button>
             <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 2 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44.jpeg" alt="Steeze After Stress, Ondo City ? moment 2" loading="lazy" decoding="async" /><span aria-hidden="true">02 &nearr;</span></button>

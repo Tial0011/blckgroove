@@ -20,12 +20,16 @@
   const video = section.querySelector('video');
   const play = section.querySelector('.memories__play');
   const status = section.querySelector('.memories__video-status');
+  const sound = section.querySelector('.memories__sound');
+  const seek = section.querySelector('.memories__seek');
   video.controls = false;
   play.hidden = false;
+  sound.hidden = false;
+  seek.hidden = false;
+  seek.disabled = true;
   play.addEventListener('click', async () => {
     if (!video.paused) { video.pause(); return; }
     status.textContent = '';
-    video.controls = true;
     try { await video.play(); } catch {
       play.hidden = false;
       status.textContent = 'Unable to play the film. Please try again.';
@@ -35,11 +39,40 @@
     const playing = !video.paused && !video.ended;
     play.classList.toggle('is-playing', playing);
     play.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} the Steeze After Stress film`);
-    play.innerHTML = `<span aria-hidden="true">${playing ? '&#10074;&#10074;' : '&#9654;'}</span> ${playing ? 'PAUSE' : 'PLAY THE FILM'}`;
   };
   video.addEventListener('play', syncPlayback);
   video.addEventListener('pause', syncPlayback);
   video.addEventListener('ended', () => { video.currentTime = 0; play.hidden = false; video.controls = false; });
+  const syncSound = () => {
+    const audible = !video.muted && video.volume > 0;
+    sound.classList.toggle('is-audible', audible);
+    sound.setAttribute('aria-pressed', String(audible));
+    sound.setAttribute('aria-label', audible ? 'Mute sound' : 'Enable sound');
+    sound.querySelector('span').textContent = audible ? 'Sound on' : 'Enable sound';
+  };
+  sound.addEventListener('click', () => {
+    const audible = !video.muted && video.volume > 0;
+    video.muted = audible;
+    if (!audible && video.volume === 0) video.volume = 1;
+    syncSound();
+  });
+  video.addEventListener('volumechange', syncSound);
+  const syncProgress = () => {
+    const ready = Number.isFinite(video.duration) && video.duration > 0;
+    seek.disabled = !ready;
+    seek.value = ready ? video.currentTime / video.duration * 100 : 0;
+    seek.style.setProperty('--progress', `${seek.value}%`);
+  };
+  video.addEventListener('loadedmetadata', syncProgress);
+  video.addEventListener('timeupdate', syncProgress);
+  seek.addEventListener('input', () => {
+    if (Number.isFinite(video.duration) && video.duration > 0) {
+      video.currentTime = Number(seek.value) / 100 * video.duration;
+      seek.style.setProperty('--progress', `${seek.value}%`);
+    }
+  });
+  syncPlayback();
+  syncSound();
   new IntersectionObserver(([entry]) => { if (!entry.isIntersecting) video.pause(); }).observe(video);
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
 
