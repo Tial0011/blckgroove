@@ -28,6 +28,7 @@
 .temptation__experience { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12%; padding: 140px 0; }
 .temptation .temptation__dress { margin-top: 36px; font-size: .85rem; line-height: 2; color: #b8b2bd; }
 .temptation__dress em { color: #ede6ea; font-style: normal; }
+.temptation .temptation__experience-note { margin-top: 24px; font-size: .8rem; line-height: 1.9; color: #b8b2bd; max-width: 540px; }
 .temptation__elements, .temptation__access { list-style: none; padding: 0; margin: 0; }
 .temptation__elements li { border-bottom: 1px solid #30252c; padding: 18px 0; font: 400 clamp(1.9rem, 4.2vw, 3.8rem)/1.1 var(--font-display); display: flex; align-items: center; gap: 22px; }
 .temptation__elements li:first-child { padding-top: 0; }
