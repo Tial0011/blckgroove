@@ -141,7 +141,7 @@
 
 /* ==========================================================================
    Footer
-   Keep the brand and social icons left, with a straight right-aligned nav.
+   Keep the brand left and the nav on the right, with left-aligned link text.
    ========================================================================== */
 
 @media (max-width: 760px) {
@@ -165,7 +165,7 @@
   }
 
   .site-footer__links {
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
   .site-footer__bottom {
