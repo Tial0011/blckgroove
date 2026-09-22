@@ -23,16 +23,22 @@
   video.controls = false;
   play.hidden = false;
   play.addEventListener('click', async () => {
+    if (!video.paused) { video.pause(); return; }
     status.textContent = '';
     video.controls = true;
-    play.hidden = true;
     try { await video.play(); } catch {
       play.hidden = false;
       status.textContent = 'Unable to play the film. Please try again.';
     }
   });
-  video.addEventListener('play', () => { play.hidden = true; });
-  video.addEventListener('pause', () => { play.hidden = false; });
+  const syncPlayback = () => {
+    const playing = !video.paused && !video.ended;
+    play.classList.toggle('is-playing', playing);
+    play.setAttribute('aria-label', `${playing ? 'Pause' : 'Play'} the Steeze After Stress film`);
+    play.innerHTML = `<span aria-hidden="true">${playing ? '&#10074;&#10074;' : '&#9654;'}</span> ${playing ? 'PAUSE' : 'PLAY THE FILM'}`;
+  };
+  video.addEventListener('play', syncPlayback);
+  video.addEventListener('pause', syncPlayback);
   video.addEventListener('ended', () => { video.currentTime = 0; play.hidden = false; video.controls = false; });
   new IntersectionObserver(([entry]) => { if (!entry.isIntersecting) video.pause(); }).observe(video);
   document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
