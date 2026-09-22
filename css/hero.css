@@ -20,17 +20,17 @@
   z-index: -2;
   inset: -12%;
   background:
-    linear-gradient(180deg, rgba(8,8,10,.35), transparent 35%, #08080a 96%),
-    radial-gradient(ellipse at 80% 48%, rgba(143,20,29,.38), transparent 48%),
-    conic-gradient(from 218deg at 80% 0%, transparent 0deg, rgba(185,184,195,.14) 12deg, transparent 24deg 360deg),
-    conic-gradient(from 190deg at 62% 0%, transparent 0deg, rgba(137,19,29,.30) 13deg, transparent 29deg 360deg);
+    linear-gradient(180deg, rgba(8,8,10,.22), transparent 30%, #08080a 100%),
+    radial-gradient(ellipse at 80% 48%, rgba(143,20,29,.55), transparent 58%),
+    conic-gradient(from 218deg at 80% 0%, transparent 0deg, rgba(185,184,195,.22) 12deg, transparent 24deg 360deg),
+    conic-gradient(from 190deg at 62% 0%, transparent 0deg, rgba(137,19,29,.42) 13deg, transparent 29deg 360deg);
   transform: translate3d(0, var(--hero-drift, 0px), 0);
 }
 .hero__atmosphere::after {
   content: '';
   position: absolute;
   inset: 10% 0;
-  background: radial-gradient(ellipse at 35% 55%, rgba(151,158,173,.07), transparent 48%);
+  background: radial-gradient(ellipse at 35% 55%, rgba(151,158,173,.11), transparent 48%);
   animation: hero-atmosphere 16s ease-in-out infinite alternate;
 }
 .hero__grain {
