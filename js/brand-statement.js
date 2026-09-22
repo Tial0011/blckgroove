@@ -1,4 +1,4 @@
-/* Scroll position drives one sticky brand composition; no continuous render loop. */
+/* Ease toward scroll progress; stop rendering once settled or offscreen. */
 (() => {
   const section = document.querySelector('[data-brand-statement]');
   if (!section) return;
@@ -6,26 +6,50 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let visible = false;
   let frame = null;
-  const update = () => {
-    frame = null;
-    if (reduced.matches) return;
-    const runway = section.offsetHeight - stage.offsetHeight;
-    const progress = Math.min(1, Math.max(0, -section.getBoundingClientRect().top / Math.max(1, runway)));
-    const eased = progress * progress * (3 - 2 * progress);
-    section.style.setProperty('--brand-scale', (0.92 + eased * 0.08).toFixed(4));
+  let current = 0;
+  let target = 0;
+  let lastTime = 0;
+
+  const paint = () => {
+    const eased = current * current * (3 - 2 * current);
+    section.style.setProperty('--brand-scale', (0.92 + eased * 0.08).toFixed(5));
     section.style.setProperty('--brand-x', `${-2 + eased * 2}vw`);
-    section.style.setProperty('--brand-y', `${(1 - eased) * 28}px`);
+    section.style.setProperty('--brand-y', `${(1 - eased) * 16}px`);
+  };
+  const animate = (time) => {
+    frame = null;
+    if (!visible || reduced.matches) return;
+    const delta = lastTime ? Math.min(time - lastTime, 64) : 16;
+    lastTime = time;
+    current += (target - current) * (1 - Math.exp(-delta / 110));
+    if (Math.abs(target - current) < 0.0001) current = target;
+    paint();
+    if (current !== target) frame = requestAnimationFrame(animate);
+    else lastTime = 0;
   };
   const schedule = () => {
-    if (frame === null && visible) frame = requestAnimationFrame(update);
+    if (!visible || reduced.matches) return;
+    const runway = Math.max(1, section.offsetHeight - stage.offsetHeight);
+    const stickyTop = parseFloat(getComputedStyle(stage).top) || 0;
+    target = Math.min(1, Math.max(0, (stickyTop - section.getBoundingClientRect().top) / runway));
+    if (frame === null) frame = requestAnimationFrame(animate);
   };
-  const observer = new IntersectionObserver(([entry]) => {
+  new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting;
     if (visible) schedule();
-  });
-  observer.observe(section);
+    else {
+      if (frame !== null) cancelAnimationFrame(frame);
+      frame = null;
+      lastTime = 0;
+    }
+  }).observe(section);
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', schedule, { passive: true });
-  reduced.addEventListener('change', schedule);
-  update();
+  reduced.addEventListener('change', () => {
+    if (frame !== null) cancelAnimationFrame(frame);
+    frame = null;
+    lastTime = 0;
+    schedule();
+  });
+  paint();
 })();
