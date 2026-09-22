@@ -19,6 +19,7 @@
 .temptation__visual figcaption { position: absolute; z-index: 1; bottom: 7%; left: 6%; font-size: .6rem; letter-spacing: .2em; }
 .temptation__story { display: grid; grid-template-columns: 1fr 1.2fr; gap: 12%; margin: 64px 0 100px; }
 .temptation__story > p:last-child { font-size: clamp(1rem, 1.6vw, 1.2rem); line-height: 1.9; color: #c1bbc4; max-width: 580px; }
+.temptation__story > p:only-child { grid-column: 2; }
 .temptation__date { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-block: 1px solid #34252d; padding: 44px 0; }
 .temptation .temptation__date-title { font: 400 clamp(2.3rem, 4.7vw, 4.2rem)/1.1 var(--font-display); margin: 12px 0; }
 .temptation__location { font-size: .72rem; font-weight: 600; letter-spacing: .15em; color: #b8b2bd; }
@@ -44,11 +45,23 @@
 .temptation__access li div p { color: #b5aeb9; font-size: .73rem; margin-top: 9px; }
 .temptation__access-note { font: italic .95rem/1.6 Georgia, serif; color: #ada3ad; }
 .temptation__price { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 500; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
-.temptation__booking { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 30px; }
+.temptation__booking { display: flex; justify-content: space-between; align-items: center; gap: 32px; margin-top: 48px; }
 .temptation__booking > div { max-width: 550px; }
 .temptation__booking h4 { font: 400 1.8rem/1.2 var(--font-display); margin-bottom: 14px; }
 .temptation__booking p { font-size: .78rem; line-height: 1.8; color: #b8b2bd; }
-.temptation__booking .temptation__bank-status { color: #e3707c; margin: 12px 0; }
+.temptation__bank { margin: 26px 0 20px; padding: clamp(18px, 3vw, 28px); border: 1px solid #59313e; border-top: 2px solid #a34959; background: radial-gradient(ellipse at top right, #50182955, transparent 75%), #100c10; }
+.temptation__bank-top { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid #ffffff15; }
+.temptation__bank-top > span, .temptation__bank-label { font-size: .58rem; font-weight: 700; letter-spacing: .16em; color: #c2929e; }
+.temptation__bank-top strong { font-size: .95rem; font-weight: 700; color: #eee5eb; }
+.temptation__bank-label { display: block; color: #aaa0aa; }
+.temptation__account-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 6px 0 24px; }
+.temptation__account { font-size: clamp(1.45rem, 3vw, 2.1rem); font-weight: 500; letter-spacing: .055em; font-variant-numeric: tabular-nums; user-select: all; }
+.temptation__copy { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 10px; font-size: .6rem; letter-spacing: .1em; border: 1px solid #794051; background: #571b2c55; }
+.temptation__copy:hover { background: #76253c88; }
+.temptation__copy[hidden] { display: none; }
+.temptation__booking .temptation__account-name { margin-top: 6px; color: #eee5eb; font-size: .94rem; font-weight: 600; }
+.temptation__booking .temptation__copy-status { color: #e8a4b2; font-size: .7rem; }
+.temptation__copy-status:not(:empty) { margin-top: 12px; }
 .temptation__booking p a { text-decoration: underline; text-underline-offset: 3px; }
 .temptation__booking .temptation__cta { flex-shrink: 0; gap: 18px; }
 .temptation__ending { text-align: center; padding: 160px 0 110px; background: radial-gradient(ellipse at 50% 62%, #50122544, transparent 62%); }
@@ -67,6 +80,7 @@
   .temptation__visual-type { font-size: 13vw; top: 40%; }
   .temptation__visual figcaption { font-size: .5rem; letter-spacing: .1em; }
   .temptation__story { grid-template-columns: 1fr; gap: 22px; margin: 36px 0 64px; }
+  .temptation__story > p:only-child { grid-column: 1; }
   .temptation__date { align-items: flex-start; flex-direction: column; }
   .temptation__experience { grid-template-columns: 1fr; gap: 40px; padding: 80px 0; }
   .temptation__ticket-heading { flex-direction: column; align-items: flex-start; }
@@ -74,6 +88,7 @@
   .temptation__access-note { grid-column: 2 / -1; grid-row: 2; font-size: .85rem; }
   .temptation__price { grid-column: 3; grid-row: 1; }
   .temptation__booking { flex-direction: column; align-items: flex-start; }
+  .temptation__booking > div { width: 100%; }
   .temptation__ending { padding: 110px 0 80px; }
 }
 @media (prefers-reduced-motion: reduce) {
