@@ -146,14 +146,14 @@
 
 @media (max-width: 760px) {
   .site-footer__inner {
-    padding: var(--space-7) var(--edge-padding) var(--space-5);
+    padding: var(--space-8) var(--edge-padding) var(--space-6);
   }
 
   .site-footer__top {
     flex-direction: row;
     align-items: flex-start;
     gap: var(--space-4);
-    padding-bottom: var(--space-6);
+    padding-bottom: var(--space-7);
   }
 
   .site-footer__brand {

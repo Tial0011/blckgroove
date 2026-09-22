@@ -23,7 +23,7 @@
 .site-footer__inner {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: var(--space-8) var(--edge-padding) var(--space-5);
+  padding: calc(var(--space-8) + var(--space-4)) var(--edge-padding) var(--space-6);
 }
 
 /* ---- Top area: brand / nav / social ---- */
@@ -33,7 +33,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--space-7);
-  padding-bottom: var(--space-7);
+  padding-bottom: var(--space-8);
 }
 
 .site-footer__brand {
