@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -20,17 +21,31 @@
   <div id="navbar-root"></div>
 
   <main>
-    <!--
-      Phase 1 placeholder only — proves the navbar's transparent-to-solid
-      scroll transition against a full-height section. Real hero content
-      (About, Temptation, Experience, Gallery, Tickets sections) comes
-      in later phases.
-    -->
-    <section class="hero-placeholder">
-      <p class="hero-placeholder__note">
-        Hero section arrives in the next phase — scroll to see the navbar
-        transition from transparent to solid.
-      </p>
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <div class="hero__atmosphere" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <header class="hero__brand">
+          <p class="hero__eyebrow">BLCKGROOVE ENTERTAINMENT</p>
+          <h1 class="hero__title" id="hero-title">BLCK<span>GROOVE</span></h1>
+          <p class="hero__manifesto">UNFILTERED ENTERTAINMENT. <span>WITH 1000% ENERGY.</span></p>
+        </header>
+
+        <div class="hero__event">
+          <div class="hero__event-name">
+            <p class="hero__presents">PRESENTS</p>
+            <h2 class="hero__temptation">TEMPTATION</h2>
+            <p class="hero__event-tagline">BE TEMPTED. NOT EXEMPTED.</p>
+          </div>
+          <div class="hero__booking">
+            <p class="hero__date"><time datetime="2026-11-13T21:00">FRIDAY, NOVEMBER 13, 2026 <span>9PM</span></time></p>
+            <!-- Reserved for the upcoming ticket information section. -->
+            <a class="hero__cta" href="#tickets">GET TICKETS <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <a class="hero__scroll" href="#about" data-hero-scroll>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
     <section id="about" style="height: 100vh;"></section>
@@ -45,6 +60,7 @@
   <script src="js/navbar.js"></script>
   <script src="js/mobile-menu.js"></script>
   <script src="js/footer.js"></script>
+  <script src="js/hero.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
