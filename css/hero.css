@@ -10,6 +10,12 @@
 .hero__media, .hero__atmosphere, .hero__grain { position: absolute; pointer-events: none; }
 .hero__media { inset: -3%; z-index: -3; transform: translate3d(0, var(--hero-drift, 0px), 0); }
 .hero__media img, .hero__media video { width: 100%; height: 100%; object-fit: cover; object-position: 65% center; opacity: .8; filter: blur(5px); }
+.hero__media img.is-loading { opacity: 0; }
+.hero__media img.is-ready { animation: hero-image-enter 1.4s ease-out both; }
+@keyframes hero-image-enter {
+  from { opacity: 0; transform: scale(1.025); }
+  to { opacity: .8; transform: scale(1); }
+}
 .hero__media::after {
   content: '';
   position: absolute;
@@ -148,6 +154,7 @@
   .hero__cta { padding-inline: 9px; gap: 8px; font-size: .5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .hero__media img.is-ready { animation: none; }
   .hero__brand, .hero__story, .hero__actions, .hero__scroll span, .hero__atmosphere::after { animation: none; }
   .hero__atmosphere, .hero__media { transform: none; }
   .hero__cta, .hero__cta span { transition: none; }

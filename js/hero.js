@@ -3,6 +3,17 @@
   const hero = document.querySelector('[data-hero]');
   if (!hero) return;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const background = hero.querySelector('.hero__media img');
+  if (background) {
+    const reveal = () => {
+      background.classList.remove('is-loading');
+      background.classList.add('is-ready');
+    };
+    background.classList.add('is-loading');
+    background.addEventListener('load', reveal, { once: true });
+    background.addEventListener('error', () => background.classList.remove('is-loading'), { once: true });
+    if (background.complete) reveal();
+  }
   let frame = null;
 
   const update = () => {
