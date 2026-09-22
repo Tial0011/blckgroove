@@ -1,199 +1,582 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BLCKGROOVE Entertainment</title>
-  <meta name="description" content="BLCKGROOVE Entertainment — premium nightlife experiences." />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLCKGROOVE Entertainment</title>
+    <meta
+      name="description"
+      content="BLCKGROOVE Entertainment — premium nightlife experiences."
+    />
 
-  <link rel="icon" href="assets/logo/blckgroove-logo.jpeg" />
+    <link rel="icon" href="assets/logo/blckgroove-logo.jpeg" />
 
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/brand-statement.css" />
-  <link rel="stylesheet" href="css/memories.css" />
-  <link rel="stylesheet" href="css/temptation.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-</head>
-<body id="top">
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/brand-statement.css" />
+    <link rel="stylesheet" href="css/memories.css" />
+    <link rel="stylesheet" href="css/temptation.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body id="top">
+    <!-- Navbar is injected here by js/navbar.js from components/navbar.html -->
+    <div id="navbar-root"></div>
 
-  <!-- Navbar is injected here by js/navbar.js from components/navbar.html -->
-  <div id="navbar-root"></div>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title" data-hero>
-      <!-- Text-free background adapted from the supplied flyer. -->
-      <div class="hero__media" aria-hidden="true">
-        <img src="assets/hero/flyer-atmosphere.webp" alt="" fetchpriority="high" decoding="async" width="1672" height="941" />
-      </div>
-      <div class="hero__atmosphere" aria-hidden="true"></div>
-      <div class="hero__grain" aria-hidden="true"></div>
-      <div class="hero__inner">
-        <div class="hero__content">
-          <header class="hero__brand">
-            <p class="hero__eyebrow">BLCKGROOVE ENTERTAINMENT</p>
-            <h1 class="hero__title" id="hero-title">BLCK<span>GROOVE</span></h1>
-          </header>
-          <div class="hero__story">
-            <p class="hero__statement">Born from a vision. Driven by music, culture and creativity.</p>
-            <p class="hero__community">We have created experiences that became unforgettable memories.</p>
-            <p class="hero__manifesto">UNFILTERED ENTERTAINMENT. <span>WITH 1000% ENERGY.</span></p>
-            <p class="hero__origin">EST. 2024 <span aria-hidden="true">&mdash;</span> ONDO CITY</p>
-          </div>
-          <div class="hero__actions">
-            <a class="hero__cta hero__cta--primary" href="#about" data-hero-scroll>EXPLORE BLCKGROOVE <span aria-hidden="true">&darr;</span></a>
-            <!-- Reserved for the upcoming ticket information section. -->
-            <a class="hero__cta hero__cta--secondary" href="#tickets">GET TICKETS <span aria-hidden="true">&nearr;</span></a>
-          </div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title" data-hero>
+        <!-- Text-free background adapted from the supplied flyer. -->
+        <div class="hero__media" aria-hidden="true">
+          <img
+            src="assets/hero/flyer-atmosphere.webp"
+            alt=""
+            fetchpriority="high"
+            decoding="async"
+            width="1672"
+            height="941"
+          />
         </div>
-        <p class="hero__edge">MUSIC / CULTURE / ENERGY / EXPERIENCE</p>
-        <a class="hero__scroll" href="#about" data-hero-scroll>SCROLL TO DISCOVER <span aria-hidden="true">&darr;</span></a>
-      </div>
-    </section>
-
-    <section class="brand-statement" id="about" aria-label="BLCKGROOVE brand statement" data-brand-statement>
-      <svg width="0" height="0" aria-hidden="true" style="position:absolute">
-        <defs>
-          <filter id="brand-white-ink" color-interpolation-filters="sRGB">
-            <feColorMatrix type="luminanceToAlpha" />
-            <feComponentTransfer>
-              <feFuncR type="linear" slope="0" intercept="1" />
-              <feFuncG type="linear" slope="0" intercept="1" />
-              <feFuncB type="linear" slope="0" intercept="1" />
-            </feComponentTransfer>
-          </filter>
-        </defs>
-      </svg>
-      <div class="brand-statement__stage">
-        <div class="brand-statement__light" aria-hidden="true"></div>
-        <p class="brand-statement__origin">EST. 2024 &mdash; ONDO CITY</p>
-        <div class="brand-statement__reveal">
-          <div class="brand-statement__mark">
-            <img src="assets/logo/blckgroove-logo.jpeg" alt="BLCKGROOVE Entertainment" width="1242" height="565" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <p class="brand-statement__signature">UNFILTERED ENTERTAINMENT.<br />WITH 1000% ENERGY.</p>
-      </div>
-    </section>
-
-    <section class="memories" id="previous-experience" aria-labelledby="memories-title" data-memories>
-      <div class="memories__inner">
-        <header class="memories__intro" data-reveal>
-          <p class="memories__label">01 / PREVIOUS EXPERIENCE</p>
-          <h2 id="memories-title">WE&rsquo;VE BEEN<br />HERE <em>BEFORE.</em></h2>
-          <p class="memories__subheading">AND WE&rsquo;RE JUST GETTING STARTED.</p>
-        </header>
-        <figure class="memories__feature" data-reveal>
-          <img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg" alt="Guests enjoying the night at Steeze After Stress" loading="lazy" decoding="async" width="1242" height="839" />
-          <figcaption><h3>STEEZE <span>AFTER STRESS</span></h3><p>JULY 2026 &middot; ONDO CITY</p></figcaption>
-        </figure>
-        <div class="memories__pair">
-          <figure class="memories__support" data-reveal>
-            <img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.49.jpeg" alt="A smiling percussionist playing drums at Steeze After Stress" loading="lazy" decoding="async" width="1242" height="813" />
-          </figure>
-          <div class="memories__film" data-reveal>
-            <p class="memories__label">WATCH THE NIGHT</p>
-            <div class="memories__player">
-              <video muted playsinline preload="none" controls poster="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg" aria-label="Steeze After Stress event film">
-                <source src="assets/videos/steeze-after-stress-30s.mp4" type="video/mp4" />
-                Your browser does not support this video.
-              </video>
-              <button class="memories__play" type="button" hidden aria-label="Play the Steeze After Stress film"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M19 10 53 32 19 54Z" /></svg></button>
-              <button class="memories__sound" type="button" hidden aria-label="Enable sound" aria-pressed="false">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4Z" /><path class="memories__sound-off" d="m16 9 6 6m0-6-6 6" /><path class="memories__sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14" /></svg>
-                <span>Enable sound</span>
-              </button>
-              <input class="memories__seek" type="range" min="0" max="100" value="0" step="0.1" hidden aria-label="Seek through film" />
+        <div class="hero__atmosphere" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <div class="hero__content">
+            <header class="hero__brand">
+              <p class="hero__eyebrow">BLCKGROOVE ENTERTAINMENT</p>
+              <h1 class="hero__title" id="hero-title">
+                BLCK<span>GROOVE</span>
+              </h1>
+            </header>
+            <div class="hero__story">
+              <p class="hero__statement">
+                Born from a vision. Driven by music, culture and creativity.
+              </p>
+              <p class="hero__community">
+                We have created experiences that became unforgettable memories.
+              </p>
+              <p class="hero__manifesto">
+                UNFILTERED ENTERTAINMENT. <span>WITH 1000% ENERGY.</span>
+              </p>
+              <p class="hero__origin">
+                EST. 2024 <span aria-hidden="true">&mdash;</span> ONDO CITY
+              </p>
             </div>
-            <p class="memories__video-status" role="status"></p>
+            <div class="hero__actions">
+              <a
+                class="hero__cta hero__cta--primary"
+                href="#about"
+                data-hero-scroll
+                >EXPLORE BLCKGROOVE <span aria-hidden="true">&darr;</span></a
+              >
+              <!-- Reserved for the upcoming ticket information section. -->
+              <a class="hero__cta hero__cta--secondary" href="#tickets"
+                >GET TICKETS <span aria-hidden="true">&nearr;</span></a
+              >
+            </div>
           </div>
+          <p class="hero__edge">MUSIC / CULTURE / ENERGY / EXPERIENCE</p>
+          <a class="hero__scroll" href="#about" data-hero-scroll
+            >SCROLL TO DISCOVER <span aria-hidden="true">&darr;</span></a
+          >
         </div>
-        <div class="memories__wall" id="gallery">
-          <div class="memories__wall-heading"><h3>MORE <em>MOMENTS</em></h3><span>STEEZE AFTER STRESS / JULY 2026</span></div>
-          <div class="memories__grid">
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 1 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 1" loading="lazy" decoding="async" /><span aria-hidden="true">01 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 2 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44.jpeg" alt="Steeze After Stress, Ondo City ? moment 2" loading="lazy" decoding="async" /><span aria-hidden="true">02 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 3 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.45.jpeg" alt="Steeze After Stress, Ondo City ? moment 3" loading="lazy" decoding="async" /><span aria-hidden="true">03 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 4 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.46%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 4" loading="lazy" decoding="async" /><span aria-hidden="true">04 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 5 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.46.jpeg" alt="Steeze After Stress, Ondo City ? moment 5" loading="lazy" decoding="async" /><span aria-hidden="true">05 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 6 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 6" loading="lazy" decoding="async" /><span aria-hidden="true">06 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 7 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.48%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 7" loading="lazy" decoding="async" /><span aria-hidden="true">07 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 8 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.48.jpeg" alt="Steeze After Stress, Ondo City ? moment 8" loading="lazy" decoding="async" /><span aria-hidden="true">08 &nearr;</span></button>
-            <button class="memories__moment" type="button" data-memory data-reveal aria-label="Open moment 9 from Steeze After Stress"><img src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.49%20(1).jpeg" alt="Steeze After Stress, Ondo City ? moment 9" loading="lazy" decoding="async" /><span aria-hidden="true">09 &nearr;</span></button>
+      </section>
+
+      <section
+        class="brand-statement"
+        id="about"
+        aria-label="BLCKGROOVE brand statement"
+        data-brand-statement
+      >
+        <svg width="0" height="0" aria-hidden="true" style="position: absolute">
+          <defs>
+            <filter id="brand-white-ink" color-interpolation-filters="sRGB">
+              <feColorMatrix type="luminanceToAlpha" />
+              <feComponentTransfer>
+                <feFuncR type="linear" slope="0" intercept="1" />
+                <feFuncG type="linear" slope="0" intercept="1" />
+                <feFuncB type="linear" slope="0" intercept="1" />
+              </feComponentTransfer>
+            </filter>
+          </defs>
+        </svg>
+        <div class="brand-statement__stage">
+          <div class="brand-statement__light" aria-hidden="true"></div>
+          <p class="brand-statement__origin">EST. 2024 &mdash; ONDO CITY</p>
+          <div class="brand-statement__reveal">
+            <div class="brand-statement__mark">
+              <img
+                src="assets/logo/blckgroove-logo.jpeg"
+                alt="BLCKGROOVE Entertainment"
+                width="1242"
+                height="565"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
+          <p class="brand-statement__signature">
+            UNFILTERED ENTERTAINMENT.<br />WITH 1000% ENERGY.
+          </p>
         </div>
-        <footer class="memories__ending" data-reveal><p>ONE CHAPTER DOWN.</p><span>THE NEXT ONE IS COMING.</span></footer>
-      </div>
-      <dialog class="memories__lightbox" aria-label="Steeze After Stress photos">
-        <button class="memories__close" type="button" aria-label="Close photo">CLOSE &times;</button>
-        <button class="memories__previous" type="button" aria-label="Previous photo">&larr;</button>
-        <figure><img alt="" /><figcaption aria-live="polite"></figcaption></figure>
-        <button class="memories__next" type="button" aria-label="Next photo">&rarr;</button>
-      </dialog>
-    </section>
+      </section>
 
-    <section class="temptation" id="temptation" aria-labelledby="temptation-title">
-      <div class="temptation__inner">
-        <header class="temptation__reveal" data-temptation-reveal>
-          <p class="temptation__eyebrow">02 / THE NEXT CHAPTER</p>
-          <h2 class="temptation__title" id="temptation-title">TEMPTATION</h2>
-          <div class="temptation__title-caption"><span>A BLCKGROOVE EXPERIENCE</span><span>ONDO CITY / 2026</span></div>
-          <p class="temptation__motto">BE TEMPTED.<br /><em>NOT EXEMPTED.</em></p>
-        </header>
-        <div class="temptation__invitation" data-temptation-reveal>
-          <span class="temptation__line" aria-hidden="true"></span>
-          <p>There are nights you attend.<br />And then there are nights<br /><em>you surrender to.</em></p>
-        </div>
-        <figure class="temptation__visual" data-temptation-reveal>
-          <img src="assets/hero/flyer-atmosphere.webp" alt="Red light washes over a crowd gathered around the music" loading="lazy" decoding="async" width="1672" height="941" />
-          <div class="temptation__visual-type" aria-hidden="true">GIVE IN<br /><i>TO THE NIGHT.</i></div>
-          <figcaption>THE MUSIC. THE MYSTERY. THE MOMENT.</figcaption>
-        </figure>
-        <div class="temptation__story" data-temptation-reveal>
-          <p class="temptation__eyebrow">AN INVITATION TO FEEL SOMETHING</p>
-          <p>TEMPTATION is BLCKGROOVE&rsquo;s next immersive experience. A night shaped by music, charged with energy and wrapped in mystery. Step into the atmosphere. Let the unexpected find you.</p>
-        </div>
-        <div class="temptation__date" data-temptation-reveal>
-          <div><p class="temptation__eyebrow">SAVE THE NIGHT</p><p class="temptation__date-title"><time datetime="2026-11-13T21:00:00+01:00">NOVEMBER 13, 2026</time></p><p class="temptation__location">9PM &middot; DSERIES &middot; ONDO CITY</p></div>
-          <a class="temptation__cta" href="#tickets">GET TICKETS <span aria-hidden="true">&nearr;</span></a>
-        </div>
-        <section class="temptation__experience" id="experience" aria-labelledby="experience-title">
-          <div data-temptation-reveal><h3 class="temptation__eyebrow" id="experience-title">THE EXPERIENCE</h3><p class="temptation__dress">Come curious.<br />Come dressed for the occasion.<br /><em>Come ready for the moment.</em></p></div>
-          <ol class="temptation__elements">
-            <li data-temptation-reveal><span>01</span>MUSIC</li><li data-temptation-reveal><span>02</span>ATMOSPHERE</li><li data-temptation-reveal><span>03</span>ENERGY</li><li data-temptation-reveal><span>04</span>THE UNEXPECTED</li>
-          </ol>
-        </section>
-        <section class="temptation__tickets" id="tickets" aria-labelledby="tickets-title">
-          <header class="temptation__ticket-heading" data-temptation-reveal><div><p class="temptation__eyebrow">YOUR WAY INTO THE NIGHT</p><h3 id="tickets-title">CHOOSE YOUR <em>ACCESS.</em></h3></div><span>ONE NIGHT. FOUR WAYS IN.</span></header>
-          <ol class="temptation__access">
-            <li data-temptation-reveal><span class="temptation__number">01</span><div><h4>THE TEASE</h4><p>Regular Access</p></div><p class="temptation__access-note">Step into the temptation.</p><p class="temptation__price">&#8358;4,000</p></li>
-            <li data-temptation-reveal><span class="temptation__number">02</span><div><h4>TEMPTED 4</h4><p>Group Access &middot; 4 People</p></div><p class="temptation__access-note">Four tempted. One night.</p><p class="temptation__price">&#8358;15,000</p></li>
-            <li data-temptation-reveal><span class="temptation__number">03</span><div><h4>THE LAST CALL</h4><p>Late Access</p></div><p class="temptation__access-note">The night is still calling.</p><p class="temptation__price">&#8358;7,000</p></li>
-            <li data-temptation-reveal><span class="temptation__number">04</span><div><h4>THE INDULGENCE</h4><p>VIP / Reserved Section</p></div><p class="temptation__access-note">Make the moment your own.</p><p class="temptation__price">&#8358;50,000</p></li>
-          </ol>
-          <div class="temptation__booking" data-temptation-reveal>
-            <div><h4>YOUR ACCESS STARTS HERE.</h4><p>Choose your access above. Pay by bank transfer, then send your receipt and chosen ticket option to us on WhatsApp for confirmation.</p><p class="temptation__bank-status">Bank details will be added soon.</p><p>Receipt confirmation: <a href="https://wa.me/2348121234627" target="_blank" rel="noopener noreferrer">+234 812 123 4627</a></p></div>
-            <a class="temptation__cta" href="https://wa.me/2348121234627?text=Hi%20BLCKGROOVE%2C%20I%20would%20like%20to%20confirm%20my%20TEMPTATION%20ticket.%20I%20will%20attach%20my%20payment%20receipt%20and%20chosen%20ticket%20option." target="_blank" rel="noopener noreferrer">SEND RECEIPT ON WHATSAPP <span aria-hidden="true">&nearr;</span></a>
+      <section
+        class="memories"
+        id="previous-experience"
+        aria-labelledby="memories-title"
+        data-memories
+      >
+        <div class="memories__inner">
+          <header class="memories__intro" data-reveal>
+            <p class="memories__label">01 / PREVIOUS EXPERIENCE</p>
+            <h2 id="memories-title">
+              WE&rsquo;VE BEEN<br />HERE <em>BEFORE.</em>
+            </h2>
+            <p class="memories__subheading">
+              AND WE&rsquo;RE JUST GETTING STARTED.
+            </p>
+          </header>
+          <figure class="memories__feature" data-reveal>
+            <img
+              src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg"
+              alt="Guests enjoying the night at Steeze After Stress"
+              loading="lazy"
+              decoding="async"
+              width="1242"
+              height="839"
+            />
+            <figcaption>
+              <h3>STEEZE <span>AFTER STRESS</span></h3>
+              <p>JULY 2026 &middot; ONDO CITY</p>
+            </figcaption>
+          </figure>
+          <div class="memories__pair">
+            <figure class="memories__support" data-reveal>
+              <img
+                src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.49.jpeg"
+                alt="A smiling percussionist playing drums at Steeze After Stress"
+                loading="lazy"
+                decoding="async"
+                width="1242"
+                height="813"
+              />
+            </figure>
+            <div class="memories__film" data-reveal>
+              <p class="memories__label">WATCH THE NIGHT</p>
+              <div class="memories__player">
+                <video
+                  muted
+                  playsinline
+                  preload="none"
+                  controls
+                  poster="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg"
+                  aria-label="Steeze After Stress event film"
+                >
+                  <source
+                    src="assets/videos/steeze-after-stress-30s.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support this video.
+                </video>
+                <button
+                  class="memories__play"
+                  type="button"
+                  hidden
+                  aria-label="Play the Steeze After Stress film"
+                >
+                  <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M19 10 53 32 19 54Z" />
+                  </svg>
+                </button>
+                <button
+                  class="memories__sound"
+                  type="button"
+                  hidden
+                  aria-label="Enable sound"
+                  aria-pressed="false"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M11 5 6 9H3v6h3l5 4Z" />
+                    <path class="memories__sound-off" d="m16 9 6 6m0-6-6 6" />
+                    <path
+                      class="memories__sound-on"
+                      d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"
+                    />
+                  </svg>
+                  <span>Enable sound</span>
+                </button>
+                <input
+                  class="memories__seek"
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  step="0.1"
+                  hidden
+                  aria-label="Seek through film"
+                />
+              </div>
+              <p class="memories__video-status" role="status"></p>
+            </div>
           </div>
-        </section>
-        <footer class="temptation__ending" data-temptation-reveal><p class="temptation__eyebrow">NOVEMBER 13. THE NIGHT IS YOURS.</p><p class="temptation__question">WILL<br /><span>YOU</span><br /><em>RESIST?</em></p><a href="#tickets" class="temptation__last-link">GIVE IN TO TEMPTATION <span aria-hidden="true">&nearr;</span></a></footer>
-      </div>
-    </section>
-  </main>
+          <div class="memories__wall" id="gallery">
+            <div class="memories__wall-heading">
+              <h3>MORE <em>MOMENTS</em></h3>
+              <span>STEEZE AFTER STRESS / JULY 2026</span>
+            </div>
+            <div class="memories__grid">
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 1 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44%20(1).jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 1"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">01 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 2 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.44.jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 2"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">02 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 3 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.45.jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 3"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">03 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 4 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.46%20(1).jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 4"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">04 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 5 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.46.jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 5"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">05 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 6 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47%20(1).jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 6"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">06 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 7 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.48%20(1).jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 7"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">07 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 8 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.48.jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 8"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">08 &nearr;</span>
+              </button>
+              <button
+                class="memories__moment"
+                type="button"
+                data-memory
+                data-reveal
+                aria-label="Open moment 9 from Steeze After Stress"
+              >
+                <img
+                  src="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.49%20(1).jpeg"
+                  alt="Steeze After Stress, Ondo City ? moment 9"
+                  loading="lazy"
+                  decoding="async"
+                /><span aria-hidden="true">09 &nearr;</span>
+              </button>
+            </div>
+          </div>
+          <footer class="memories__ending" data-reveal>
+            <p>ONE CHAPTER DOWN.</p>
+            <span>THE NEXT ONE IS COMING.</span>
+          </footer>
+        </div>
+        <dialog
+          class="memories__lightbox"
+          aria-label="Steeze After Stress photos"
+        >
+          <button
+            class="memories__close"
+            type="button"
+            aria-label="Close photo"
+          >
+            CLOSE &times;
+          </button>
+          <button
+            class="memories__previous"
+            type="button"
+            aria-label="Previous photo"
+          >
+            &larr;
+          </button>
+          <figure>
+            <img alt="" />
+            <figcaption aria-live="polite"></figcaption>
+          </figure>
+          <button class="memories__next" type="button" aria-label="Next photo">
+            &rarr;
+          </button>
+        </dialog>
+      </section>
 
-  <!-- Footer is injected here by js/footer.js from components/footer.html -->
-  <div id="footer-root"></div>
+      <section
+        class="temptation"
+        id="temptation"
+        aria-labelledby="temptation-title"
+      >
+        <div class="temptation__inner">
+          <header class="temptation__reveal" data-temptation-reveal>
+            <p class="temptation__eyebrow">02 / THE NEXT CHAPTER</p>
+            <h2 class="temptation__title" id="temptation-title">TEMPTATION</h2>
+            <div class="temptation__title-caption">
+              <span>A BLCKGROOVE EXPERIENCE</span><span>ONDO CITY / 2026</span>
+            </div>
+            <p class="temptation__motto">
+              BE TEMPTED.<br /><em>NOT EXEMPTED.</em>
+            </p>
+          </header>
+          <div class="temptation__invitation" data-temptation-reveal>
+            <span class="temptation__line" aria-hidden="true"></span>
+            <p>
+              There are nights you attend.<br />And then there are nights<br /><em
+                >you surrender to.</em
+              >
+            </p>
+          </div>
+          <figure class="temptation__visual" data-temptation-reveal>
+            <img
+              src="assets/hero/flyer-atmosphere.webp"
+              alt="Red light washes over a crowd gathered around the music"
+              loading="lazy"
+              decoding="async"
+              width="1672"
+              height="941"
+            />
+            <div class="temptation__visual-type" aria-hidden="true">
+              GIVE IN<br /><i>TO THE NIGHT.</i>
+            </div>
+            <figcaption>THE MUSIC. THE MYSTERY. THE MOMENT.</figcaption>
+          </figure>
+          <div class="temptation__story" data-temptation-reveal>
+            <p class="temptation__eyebrow">AN INVITATION TO FEEL SOMETHING</p>
+            <p>
+              TEMPTATION is BLCKGROOVE&rsquo;s next immersive experience. a
+              night created around indulgence, mystery, music, energy and
+              unforgettable moments.
+            </p>
+          </div>
+          <div class="temptation__date" data-temptation-reveal>
+            <div>
+              <p class="temptation__eyebrow">SAVE THE NIGHT</p>
+              <p class="temptation__date-title">
+                <time datetime="2026-11-13T21:00:00+01:00"
+                  >NOVEMBER 13, 2026</time
+                >
+              </p>
+              <p class="temptation__location">
+                9PM &middot; DSERIES &middot; ONDO CITY
+              </p>
+            </div>
+            <a class="temptation__cta" href="#tickets"
+              >GET TICKETS <span aria-hidden="true">&nearr;</span></a
+            >
+          </div>
+          <section
+            class="temptation__experience"
+            id="experience"
+            aria-labelledby="experience-title"
+          >
+            <div data-temptation-reveal>
+              <h3 class="temptation__eyebrow" id="experience-title">
+                THE EXPERIENCE
+              </h3>
+              <p class="temptation__dress">
+                Come curious.<br />Come dressed for the occasion.<br /><em
+                  >Come ready for the moment.</em
+                >
+              </p>
+            </div>
+            <ol class="temptation__elements">
+              <li data-temptation-reveal><span>01</span>MUSIC</li>
+              <li data-temptation-reveal><span>02</span>ATMOSPHERE</li>
+              <li data-temptation-reveal><span>03</span>ENERGY</li>
+              <li data-temptation-reveal><span>04</span>THE UNEXPECTED</li>
+            </ol>
+          </section>
+          <section
+            class="temptation__tickets"
+            id="tickets"
+            aria-labelledby="tickets-title"
+          >
+            <header class="temptation__ticket-heading" data-temptation-reveal>
+              <div>
+                <p class="temptation__eyebrow">YOUR WAY INTO THE NIGHT</p>
+                <h3 id="tickets-title">CHOOSE YOUR <em>ACCESS.</em></h3>
+              </div>
+              <span>ONE NIGHT. FOUR WAYS IN.</span>
+            </header>
+            <ol class="temptation__access">
+              <li data-temptation-reveal>
+                <span class="temptation__number">01</span>
+                <div>
+                  <h4>THE TEASE</h4>
+                  <p>Regular Access</p>
+                </div>
+                <p class="temptation__access-note">Step into the temptation.</p>
+                <p class="temptation__price">&#8358;4,000</p>
+              </li>
+              <li data-temptation-reveal>
+                <span class="temptation__number">02</span>
+                <div>
+                  <h4>TEMPTED 4</h4>
+                  <p>Group Access &middot; 4 People</p>
+                </div>
+                <p class="temptation__access-note">Four tempted. One night.</p>
+                <p class="temptation__price">&#8358;15,000</p>
+              </li>
+              <li data-temptation-reveal>
+                <span class="temptation__number">03</span>
+                <div>
+                  <h4>THE LAST CALL</h4>
+                  <p>Late Access</p>
+                </div>
+                <p class="temptation__access-note">
+                  The night is still calling.
+                </p>
+                <p class="temptation__price">&#8358;7,000</p>
+              </li>
+              <li data-temptation-reveal>
+                <span class="temptation__number">04</span>
+                <div>
+                  <h4>THE INDULGENCE</h4>
+                  <p>VIP / Reserved Section</p>
+                </div>
+                <p class="temptation__access-note">Make the moment your own.</p>
+                <p class="temptation__price">&#8358;50,000</p>
+              </li>
+            </ol>
+            <div class="temptation__booking" data-temptation-reveal>
+              <div>
+                <h4>YOUR ACCESS STARTS HERE.</h4>
+                <p>
+                  Choose your access above. Pay by bank transfer, then send your
+                  receipt and chosen ticket option to us on WhatsApp for
+                  confirmation.
+                </p>
+                <p class="temptation__bank-status">
+                  Bank details will be added soon.
+                </p>
+                <p>
+                  Receipt confirmation:
+                  <a
+                    href="https://wa.me/2348121234627"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >+234 812 123 4627</a
+                  >
+                </p>
+              </div>
+              <a
+                class="temptation__cta"
+                href="https://wa.me/2348121234627?text=Hi%20BLCKGROOVE%2C%20I%20would%20like%20to%20confirm%20my%20TEMPTATION%20ticket.%20I%20will%20attach%20my%20payment%20receipt%20and%20chosen%20ticket%20option."
+                target="_blank"
+                rel="noopener noreferrer"
+                >SEND RECEIPT ON WHATSAPP
+                <span aria-hidden="true">&nearr;</span></a
+              >
+            </div>
+          </section>
+          <footer class="temptation__ending" data-temptation-reveal>
+            <p class="temptation__eyebrow">NOVEMBER 13. THE NIGHT IS YOURS.</p>
+            <p class="temptation__question">
+              WILL<br /><span>YOU</span><br /><em>RESIST?</em>
+            </p>
+            <a href="#tickets" class="temptation__last-link"
+              >GIVE IN TO TEMPTATION <span aria-hidden="true">&nearr;</span></a
+            >
+          </footer>
+        </div>
+      </section>
+    </main>
 
-  <script src="js/navbar.js"></script>
-  <script src="js/mobile-menu.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/hero.js"></script>
-  <script src="js/brand-statement.js"></script>
-  <script src="js/memories.js"></script>
-  <script src="js/temptation.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <!-- Footer is injected here by js/footer.js from components/footer.html -->
+    <div id="footer-root"></div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/brand-statement.js"></script>
+    <script src="js/memories.js"></script>
+    <script src="js/temptation.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
