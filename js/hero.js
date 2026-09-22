@@ -17,11 +17,11 @@
   reducedMotion.addEventListener('change', schedule);
   update();
 
-  hero.querySelector('[data-hero-scroll]').addEventListener('click', (event) => {
+  hero.querySelectorAll('[data-hero-scroll]').forEach((link) => link.addEventListener('click', (event) => {
     const target = document.querySelector('#about');
     if (!target) return;
     event.preventDefault();
     target.scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
     history.replaceState(null, '', '#about');
-  });
+  }));
 })();

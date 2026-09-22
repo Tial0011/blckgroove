@@ -22,29 +22,31 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title" data-hero>
+      <!-- Insert an image or muted, looping, playsinline video inside hero__media.
+           The overlay and object-fit styles provide the cinematic treatment. -->
+      <div class="hero__media" aria-hidden="true"></div>
       <div class="hero__atmosphere" aria-hidden="true"></div>
       <div class="hero__grain" aria-hidden="true"></div>
       <div class="hero__inner">
-        <header class="hero__brand">
-          <p class="hero__eyebrow">BLCKGROOVE ENTERTAINMENT</p>
-          <h1 class="hero__title" id="hero-title">BLCK<span>GROOVE</span></h1>
-          <p class="hero__manifesto">UNFILTERED ENTERTAINMENT. <span>WITH 1000% ENERGY.</span></p>
-        </header>
-
-        <div class="hero__event">
-          <div class="hero__event-name">
-            <p class="hero__presents">PRESENTS</p>
-            <h2 class="hero__temptation">TEMPTATION</h2>
-            <p class="hero__event-tagline">BE TEMPTED. NOT EXEMPTED.</p>
+        <div class="hero__content">
+          <header class="hero__brand">
+            <p class="hero__eyebrow">BLCKGROOVE ENTERTAINMENT</p>
+            <h1 class="hero__title" id="hero-title">BLCK<span>GROOVE</span></h1>
+          </header>
+          <div class="hero__story">
+            <p class="hero__statement">Creating immersive experiences through music, culture, creativity and pure energy.</p>
+            <p class="hero__community">Built in Ondo City. Connected to the community.</p>
+            <p class="hero__manifesto">UNFILTERED ENTERTAINMENT. <span>WITH 1000% ENERGY.</span></p>
+            <p class="hero__origin">EST. 2024 <span aria-hidden="true">&mdash;</span> ONDO CITY</p>
           </div>
-          <div class="hero__booking">
-            <p class="hero__date"><time datetime="2026-11-13T21:00">FRIDAY, NOVEMBER 13, 2026 <span>9PM</span></time></p>
+          <div class="hero__actions">
+            <a class="hero__cta hero__cta--primary" href="#about" data-hero-scroll>EXPLORE BLCKGROOVE <span aria-hidden="true">&darr;</span></a>
             <!-- Reserved for the upcoming ticket information section. -->
-            <a class="hero__cta" href="#tickets">GET TICKETS <span aria-hidden="true">↗</span></a>
+            <a class="hero__cta hero__cta--secondary" href="#tickets">GET TICKETS <span aria-hidden="true">&nearr;</span></a>
           </div>
         </div>
-
-        <a class="hero__scroll" href="#about" data-hero-scroll>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+        <p class="hero__edge">MUSIC / CULTURE / ENERGY / EXPERIENCE</p>
+        <a class="hero__scroll" href="#about" data-hero-scroll>SCROLL TO DISCOVER <span aria-hidden="true">&darr;</span></a>
       </div>
     </section>
 
