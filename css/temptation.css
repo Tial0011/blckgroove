@@ -4,7 +4,7 @@
 .temptation p, .temptation h2, .temptation h3, .temptation h4, .temptation figure { margin: 0; }
 .temptation__eyebrow { font: 700 .66rem/1.7 var(--font-body); letter-spacing: .2em; color: #e3707c; }
 .temptation__reveal { text-align: center; }
-.temptation .temptation__title { margin-top: 38px; padding: 0 .03em .08em 0; font: italic 400 clamp(3.1rem, 15.3vw, 220px)/.95 var(--font-display); letter-spacing: -.045em; color: #dedee3; background: linear-gradient(174deg, #fff 8%, #b7b7c1 28%, #555561 43%, #f7f5fa 49%, #babac3 57%, #73737e 73%, #ededf3 90%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.temptation .temptation__title { margin-top: 38px; padding: 0 0 .08em; font: normal 400 clamp(3.1rem, 15.3vw, 220px)/.95 var(--font-display); letter-spacing: .025em; color: #dedee3; background: linear-gradient(174deg, #fff 8%, #b7b7c1 28%, #555561 43%, #f7f5fa 49%, #babac3 57%, #73737e 73%, #ededf3 90%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .temptation__title-caption { display: flex; justify-content: space-between; font-size: .58rem; letter-spacing: .18em; color: #a29ca4; border-top: 1px solid #514049; padding-top: 16px; }
 .temptation .temptation__motto { margin: 90px auto 0; font: 400 clamp(2.5rem, 5.7vw, 5rem)/1 var(--font-display); letter-spacing: .015em; }
 .temptation__motto em { color: #a8a3ad; font-style: normal; }
