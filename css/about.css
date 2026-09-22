@@ -1,0 +1,45 @@
+.about { background: #0b0b0e; padding: clamp(72px, 10vw, 144px) 0 0; }
+.about__inner { max-width: 1280px; margin: auto; padding: 0 var(--edge-padding); }
+.about p, .about h2, .about h3, .about h4 { margin: 0; }
+.about__label { font-size: .65rem; font-weight: 700; letter-spacing: .16em; color: #f07880; line-height: 1.8; }
+.about__header h2 { font: 400 clamp(3rem, 7.5vw, 6.6rem)/.98 var(--font-display); letter-spacing: -.015em; margin: 28px 0 38px; }
+.about__header h2 span { color: var(--color-red-hot); }
+.about__intro { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; align-items: start; }
+.about__index { font-size: .65rem; letter-spacing: .15em; color: #8d8791; padding-top: 8px; }
+.about__intro p { font-size: clamp(.95rem, 1.5vw, 1.15rem); line-height: 1.9; color: #c8c2cb; }
+.about__intro strong { font-weight: 700; color: #f0ebee; }
+.about__origin { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; margin-top: 72px; padding: 54px 0; border-block: 1px solid #30282f; }
+.about__year > p { font: 400 clamp(6rem, 13vw, 11rem)/1 var(--font-display); letter-spacing: -.03em; margin: 14px 0; }
+.about__year > p span { color: var(--color-red-hot); }
+.about__year > span:last-child { font-size: .55rem; letter-spacing: .12em; color: #aaa2ad; }
+.about__copy p { font-size: .9rem; line-height: 1.95; color: #b9b2bd; }
+.about__copy p + p { margin-top: 22px; }
+.about__copy strong { color: #eee8ed; font-weight: 600; }
+.about__archive { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; padding-top: 80px; }
+.about__archive-intro h3, .about__next h3 { font: 400 clamp(2.4rem, 4.5vw, 4rem)/1.03 var(--font-display); margin: 22px 0; }
+.about__archive-intro h3 span { color: #a8a0ac; }
+.about__archive-intro > p:last-child { max-width: 310px; font-size: .85rem; line-height: 1.9; color: #aaa3af; }
+.about__events { list-style: none; margin: 0; padding: 0; }
+.about__events li { display: flex; align-items: baseline; gap: 22px; border-bottom: 1px solid #30282f; padding: 20px 0; }
+.about__events li:first-child { padding-top: 0; }
+.about__events li > span { font-size: .6rem; color: #db717d; font-variant-numeric: tabular-nums; }
+.about__events h4 { font-size: clamp(.95rem, 1.5vw, 1.15rem); font-weight: 600; line-height: 1.5; }
+.about__events small { display: block; font-size: .7rem; font-weight: 400; color: #a9a1ae; margin-top: 4px; }
+.about .about__reflection { max-width: 650px; margin: 50px 0 70px auto; font-size: .88rem; line-height: 1.9; color: #b9b2bd; }
+.about__next { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; padding: 40px clamp(20px, 4vw, 48px); border-left: 2px solid #b3121a; background: linear-gradient(110deg, #3b121e66, #17101555); }
+.about__next h3 span { color: #d4c6d0; }
+.about__next a { display: inline-flex; align-items: center; gap: 20px; min-height: 44px; font-size: .6rem; letter-spacing: .1em; color: #f07880; }
+.about__copy .about__promise { color: #eee8ed; font: italic 1.15rem/1.6 Georgia, serif; }
+.about__signature { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 44px 0; margin-top: 40px; border-top: 1px solid #30282f; }
+.about__signature strong { font-size: .85rem; font-weight: 800; letter-spacing: -.04em; }
+.about__signature > span { font-size: .65rem; color: #b9b2bd; }
+.about__signature em { color: #f07880; font-style: normal; }
+@media (max-width: 760px) {
+  .about__intro, .about__origin, .about__archive, .about__next { grid-template-columns: 1fr; gap: 28px; }
+  .about__index { display: none; }
+  .about__origin { margin-top: 40px; padding: 36px 0; }
+  .about__archive { padding-top: 48px; }
+  .about__archive-intro > p:last-child { max-width: none; }
+  .about .about__reflection { margin-block: 30px 44px; }
+  .about__signature { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
