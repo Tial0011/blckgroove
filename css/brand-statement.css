@@ -1,7 +1,7 @@
 /* Compact sticky composition with room for a gradual scroll reveal. */
 .brand-statement {
-  height: 140vh;
-  height: 140svh;
+  height: 100vh;
+  height: 100svh;
   background: #fff;
   position: relative;
 }
@@ -67,7 +67,7 @@
   transform: translateY(-43%);
 }
 @media (max-width: 760px) {
-  .brand-statement { height: 110svh; }
+  .brand-statement { height: 80svh; }
   .brand-statement__stage { height: 54svh; min-height: 300px; }
   .brand-statement__mark { width: 94%; }
   .brand-statement__origin { font-size: .52rem; }
