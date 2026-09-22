@@ -1,0 +1,189 @@
+/* ==========================================================================
+   BLCKGROOVE — Footer
+   Dark premium glass: near-black translucent surface, one restrained blur,
+   a hairline border and a soft inner highlight for depth. Black stays
+   dominant; red is used sparingly, only on hover states.
+   ========================================================================== */
+
+.site-footer {
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(23, 23, 27, 0.66) 0%, rgba(8, 8, 10, 0.92) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--color-black-line);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 -24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.site-footer__inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--space-8) var(--edge-padding) var(--space-5);
+}
+
+/* ---- Top area: brand / nav / social ---- */
+
+.site-footer__top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+
+.site-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.site-footer__logo-link {
+  display: inline-flex;
+}
+
+.site-footer__logo {
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+}
+
+.site-footer__tagline {
+  margin: 0;
+  max-width: 240px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-fog);
+}
+
+.site-footer__nav {
+  justify-self: center;
+  align-self: center;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.site-footer__link {
+  position: relative;
+  font-size: var(--nav-link-size);
+  font-weight: 600;
+  letter-spacing: var(--nav-link-tracking);
+  text-transform: uppercase;
+  color: var(--color-bone);
+  padding: var(--space-2) 0;
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--color-red-hot);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer__link:hover,
+.site-footer__link:focus-visible {
+  color: var(--color-white);
+}
+
+.site-footer__link:hover::after,
+.site-footer__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ---- Social icons ---- */
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.site-footer__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black-line);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--color-bone);
+  transition:
+    color var(--duration-fast) var(--ease-standard),
+    border-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer__icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.site-footer__icon:hover,
+.site-footer__icon:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-red-hot);
+  transform: translateY(-2px);
+}
+
+/* ---- Bottom bar ---- */
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-black-line);
+}
+
+.site-footer__copyright {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--color-fog);
+}
+
+.site-footer__back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: var(--nav-link-tracking);
+  text-transform: uppercase;
+  color: var(--color-bone);
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer__back-to-top:hover,
+.site-footer__back-to-top:focus-visible {
+  color: var(--color-red-hot);
+}
+
+.site-footer__back-to-top-arrow {
+  display: inline-block;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer__back-to-top:hover .site-footer__back-to-top-arrow {
+  transform: translateY(-3px);
+}
