@@ -2,7 +2,7 @@
 .brand-statement {
   height: 140vh;
   height: 140svh;
-  background: var(--color-void);
+  background: #fff;
   position: relative;
 }
 .brand-statement__stage {
@@ -20,10 +20,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(180deg, #08080a, transparent 25%, transparent 75%, #08080a),
-    radial-gradient(ellipse at 72% 58%, rgba(107,15,20,.18), transparent 55%),
-    radial-gradient(ellipse at 30% 42%, rgba(220,220,230,.035), transparent 48%);
+  background: radial-gradient(ellipse at 72% 58%, rgba(179,18,26,.025), transparent 55%);
 }
 .brand-statement__stage::after {
   content: '';
@@ -40,14 +37,14 @@
   font-weight: 600;
   line-height: 1.9;
   letter-spacing: .18em;
-  color: #a49da3;
+  color: #625c61;
 }
 .brand-statement__origin { top: 28px; left: var(--edge-padding); }
 .brand-statement__signature { bottom: 48px; right: var(--edge-padding); text-align: right; }
 .brand-statement__reveal {
   position: relative;
   width: 100%;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
 }
 .brand-statement__mark {
   position: relative;
@@ -58,7 +55,7 @@
   transform: translate3d(var(--brand-x, 0vw), var(--brand-y, 0px), 0) scale(var(--brand-scale, 1));
   transform-origin: center;
   will-change: transform;
-  /* Preserve the supplied raster artwork; map its ink to white and paper to black. */
+  /* Preserve the supplied logo's original black and red colours. */
 }
 .brand-statement__mark img {
   position: absolute;
@@ -68,7 +65,6 @@
   left: 0;
   top: 50%;
   transform: translateY(-43%);
-  filter: grayscale(1) contrast(8) invert(1) url('#brand-white-ink');
 }
 @media (max-width: 760px) {
   .brand-statement { height: 110svh; }
