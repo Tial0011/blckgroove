@@ -151,8 +151,8 @@
   }
 
   .site-footer__top {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: var(--space-6);
     padding-bottom: var(--space-6);
@@ -164,6 +164,10 @@
 
   .site-footer__social {
     justify-content: center;
+  }
+
+  .site-footer__links {
+    align-items: center;
   }
 
   .site-footer__bottom {
