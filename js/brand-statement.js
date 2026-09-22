@@ -4,7 +4,6 @@
   if (!section) return;
   const stage = section.querySelector('.brand-statement__stage');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const mobile = matchMedia('(max-width: 760px)');
   let visible = false;
   let frame = null;
   const update = () => {
@@ -14,9 +13,8 @@
     const progress = Math.min(1, Math.max(0, -section.getBoundingClientRect().top / Math.max(1, runway)));
     const eased = progress * progress * (3 - 2 * progress);
     section.style.setProperty('--brand-scale', (0.92 + eased * 0.08).toFixed(4));
-    section.style.setProperty('--brand-x', `${(mobile.matches ? -24 : -15) + eased * (mobile.matches ? 12 : 11)}vw`);
+    section.style.setProperty('--brand-x', `${-2 + eased * 2}vw`);
     section.style.setProperty('--brand-y', `${(1 - eased) * 28}px`);
-    section.style.setProperty('--brand-crop', `${(1 - eased) * 28}%`);
   };
   const schedule = () => {
     if (frame === null && visible) frame = requestAnimationFrame(update);
