@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blvkgroove.com.ng/sitemap.xml
-Sitemap: https://blvkgroove.com.ng/events.xml
+Sitemap: https://blckgroove.com.ng/sitemap.xml
+Sitemap: https://blckgroove.com.ng/events.xml
