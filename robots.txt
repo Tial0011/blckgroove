@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blvkgroove.com.ng/sitemap.xml
+Sitemap: https://blvkgroove.com.ng/events.xml
