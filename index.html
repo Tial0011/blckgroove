@@ -755,7 +755,7 @@
             </header>
             <ol class="temptation__access">
               <li data-temptation-reveal>
-                <details class="temptation__ticket">
+                <details class="temptation__ticket" data-ticket-price="4000">
                   <summary>
                     <span class="temptation__number">01</span>
                     <span class="temptation__ticket-label">
@@ -778,7 +778,7 @@
                 </details>
               </li>
               <li data-temptation-reveal>
-                <details class="temptation__ticket">
+                <details class="temptation__ticket" data-ticket-price="15000">
                   <summary>
                     <span class="temptation__number">02</span>
                     <span class="temptation__ticket-label">
@@ -801,7 +801,7 @@
                 </details>
               </li>
               <li data-temptation-reveal>
-                <details class="temptation__ticket">
+                <details class="temptation__ticket" data-ticket-price="7000">
                   <summary>
                     <span class="temptation__number">03</span>
                     <span class="temptation__ticket-label">
@@ -826,7 +826,7 @@
                 </details>
               </li>
               <li data-temptation-reveal>
-                <details class="temptation__ticket">
+                <details class="temptation__ticket" data-ticket-price="50000">
                   <summary>
                     <span class="temptation__number">04</span>
                     <span class="temptation__ticket-label">
@@ -855,35 +855,93 @@
                 </details>
               </li>
             </ol>
-            <div class="temptation__booking" data-temptation-reveal>
-              <div>
-                <h4>YOUR ACCESS STARTS HERE.</h4>
-                <p>
-                  Choose your access above. Pay by bank transfer, then send your
-                  receipt and chosen ticket option to us on WhatsApp for
-                  confirmation.
-                </p>
-                <p>
-                  If our main line is unavailable, call
-                  <a href="tel:07084063705">07084063705</a> or
-                  <a
-                    href="https://wa.me/2347084063705"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >WhatsApp the backup line</a
-                  >.
-                </p>
+            <p class="temptation__checkout-hint" data-temptation-reveal>
+              Select a ticket to begin your checkout.
+            </p>
+          </section>
+          <dialog
+            class="ticket-checkout"
+            data-ticket-checkout
+            aria-labelledby="ticket-checkout-title"
+          >
+            <div class="ticket-checkout__surface">
+              <header class="ticket-checkout__header">
                 <div
-                  class="temptation__bank"
-                  aria-label="Bank transfer details"
+                  class="ticket-checkout__progress"
+                  aria-label="Checkout steps"
                 >
-                  <div class="temptation__bank-top">
+                  <span data-checkout-progress="1" aria-current="step"
+                    >01 TICKET</span
+                  >
+                  <span data-checkout-progress="2">02 TRANSFER</span>
+                  <span data-checkout-progress="3">03 RECEIPT</span>
+                </div>
+                <button
+                  class="ticket-checkout__close"
+                  type="button"
+                  data-checkout-close
+                  aria-label="Close checkout"
+                >
+                  &times;
+                </button>
+              </header>
+              <p class="temptation__eyebrow">TEMPTATION / TICKET CHECKOUT</p>
+              <h2 id="ticket-checkout-title">Your night, your way in.</h2>
+
+              <section class="ticket-checkout__step" data-checkout-step="1">
+                <p class="ticket-checkout__selected" data-checkout-name></p>
+                <p
+                  class="ticket-checkout__description"
+                  data-checkout-description
+                ></p>
+                <label
+                  class="ticket-checkout__quantity-label"
+                  for="ticket-quantity"
+                >
+                  Quantity
+                </label>
+                <input
+                  class="ticket-checkout__quantity"
+                  id="ticket-quantity"
+                  data-checkout-quantity
+                  type="number"
+                  min="1"
+                  step="1"
+                  value="1"
+                  inputmode="numeric"
+                />
+                <div class="ticket-checkout__total">
+                  <span>Total</span>
+                  <strong data-checkout-total></strong>
+                </div>
+                <button
+                  class="ticket-checkout__button ticket-checkout__button--primary"
+                  type="button"
+                  data-checkout-next="2"
+                >
+                  CONTINUE TO PAYMENT <span aria-hidden="true">&nearr;</span>
+                </button>
+              </section>
+
+              <section
+                class="ticket-checkout__step"
+                data-checkout-step="2"
+                hidden
+              >
+                <p class="ticket-checkout__intro">
+                  Transfer the exact total below, then continue to send your
+                  receipt.
+                </p>
+                <div class="ticket-checkout__transfer">
+                  <div class="ticket-checkout__transfer-top">
                     <span>BANK TRANSFER</span><strong>Moniepoint</strong>
                   </div>
                   <span class="temptation__bank-label">ACCOUNT NUMBER</span>
                   <div class="temptation__account-row">
-                    <strong class="temptation__account">3004259633</strong
-                    ><button
+                    <strong class="temptation__account" data-account-number
+                      >3004259633</strong
+                    >
+                    <button
                       class="temptation__copy"
                       type="button"
                       data-copy-account
@@ -903,17 +961,77 @@
                     aria-live="polite"
                   ></p>
                 </div>
-              </div>
-              <a
-                class="temptation__cta"
-                href="https://wa.me/2348121234627?text=Hi%20BLCKGROOVE%2C%20I%20would%20like%20to%20confirm%20my%20TEMPTATION%20ticket.%20I%20will%20attach%20my%20payment%20receipt%20and%20chosen%20ticket%20option."
-                target="_blank"
-                rel="noopener noreferrer"
-                >SEND RECEIPT ON WHATSAPP
-                <span aria-hidden="true">&nearr;</span></a
+                <div class="ticket-checkout__total">
+                  <span data-checkout-order></span>
+                  <strong data-checkout-total></strong>
+                </div>
+                <div class="ticket-checkout__actions">
+                  <button
+                    class="ticket-checkout__button"
+                    type="button"
+                    data-checkout-next="1"
+                  >
+                    BACK
+                  </button>
+                  <button
+                    class="ticket-checkout__button ticket-checkout__button--primary"
+                    type="button"
+                    data-checkout-next="3"
+                  >
+                    I HAVE PAID <span aria-hidden="true">&nearr;</span>
+                  </button>
+                </div>
+              </section>
+
+              <section
+                class="ticket-checkout__step"
+                data-checkout-step="3"
+                hidden
               >
+                <p class="ticket-checkout__intro">
+                  Send your payment receipt and ticket details to confirm your
+                  booking.
+                </p>
+                <div class="ticket-checkout__receipt-summary">
+                  <strong data-checkout-order></strong>
+                  <span data-checkout-total></span>
+                </div>
+                <a
+                  class="ticket-checkout__button ticket-checkout__button--primary"
+                  data-checkout-primary
+                  href="https://wa.me/2348121234627"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MAIN WHATSAPP <span aria-hidden="true">&nearr;</span>
+                  <small>0812 123 4627</small>
+                </a>
+                <p class="ticket-checkout__backup-label">
+                  If the main line is unavailable, use the backup contact:
+                </p>
+                <a
+                  class="ticket-checkout__button"
+                  data-checkout-backup
+                  href="https://wa.me/2347084063705"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BACKUP WHATSAPP <span aria-hidden="true">&nearr;</span>
+                  <small>07084063705</small>
+                </a>
+                <a class="ticket-checkout__call" href="tel:07084063705">
+                  Or call the backup number: 07084063705
+                </a>
+                <button
+                  class="ticket-checkout__back"
+                  type="button"
+                  data-checkout-next="2"
+                >
+                  BACK TO TRANSFER DETAILS
+                </button>
+              </section>
             </div>
-          </section>
+          </dialog>
           <footer class="temptation__ending" data-temptation-reveal>
             <p class="temptation__eyebrow">NOVEMBER 13. THE NIGHT IS YOURS.</p>
             <p class="temptation__question">
