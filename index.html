@@ -358,7 +358,7 @@
               </li>
               <li>
                 <span>08</span>
-                <h4>STEEZE AFTER STRESS <small>July 2026</small></h4>
+                <h4><button class="picnic-trigger" type="button" data-steeze-open aria-haspopup="dialog" aria-controls="steeze-memories">STEEZE AFTER STRESS <span aria-hidden="true">&nearr;</span><small>July 2026 &middot; View memories</small></button></h4>
               </li>
             </ol>
           </div>
@@ -447,60 +447,19 @@
             </figure>
             <div class="memories__film" data-reveal>
               <p class="memories__label">WATCH THE NIGHT</p>
-              <div class="memories__player">
-                <video
-                  muted
-                  playsinline
-                  preload="none"
-                  controls
-                  poster="assets/images/WhatsApp%20Image%202026-09-22%20at%2016.36.47.jpeg"
-                  aria-label="Steeze After Stress event film"
-                >
-                  <source
-                    src="assets/videos/steeze-after-stress-30s.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support this video.
-                </video>
-                <button
-                  class="memories__play"
-                  type="button"
-                  hidden
-                  aria-label="Play the Steeze After Stress film"
-                >
-                  <svg viewBox="0 0 64 64" aria-hidden="true">
-                    <path d="M19 10 53 32 19 54Z" />
-                  </svg>
-                </button>
-                <button
-                  class="memories__sound"
-                  type="button"
-                  hidden
-                  aria-label="Enable sound"
-                  aria-pressed="false"
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M11 5 6 9H3v6h3l5 4Z" />
-                    <path class="memories__sound-off" d="m16 9 6 6m0-6-6 6" />
-                    <path
-                      class="memories__sound-on"
-                      d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"
-                    />
-                  </svg>
-                  <span>Enable sound</span>
-                </button>
-                <input
-                  class="memories__seek"
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="0"
-                  step="0.1"
-                  hidden
-                  aria-label="Seek through film"
-                />
-              </div>
-              <p class="memories__video-status" role="status"></p>
+        <div class="picnic__player">
+          <video playsinline preload="none" poster="assets/images/steeze-poster.jpg" aria-label="Steeze After Stress highlights, 30 seconds"><source src="assets/videos/steeze-after-stress-30s.mp4" type="video/mp4"></video>
+          <span class="picnic__film-tag">STEEZE / THE HIGHLIGHTS</span>
+          <button type="button" class="picnic__big-play" aria-label="Play Steeze After Stress highlights"><span aria-hidden="true">▶</span><small>RELIVE IT</small></button>
+          <div class="picnic__controls">
+            <button type="button" data-film-play aria-label="Play video">▶</button>
+            <span class="picnic__time">0:00 / 0:30</span>
+            <input class="picnic__progress" type="range" min="0" max="30" step="0.1" value="0" aria-label="Video progress" disabled>
+            <button type="button" data-film-sound aria-label="Mute video" aria-pressed="false">SOUND ON</button>
+          </div>
+        </div>
+        <p class="picnic__status" role="status"></p>
+
             </div>
           </div>
           <div class="memories__wall" id="gallery">
@@ -1072,7 +1031,9 @@
     <script src="js/footer.js"></script>
     <script src="js/hero.js"></script>
     <script src="js/brand-statement.js"></script>
+    <script src="js/film-player.js"></script>
     <script src="js/memories.js"></script>
+    <script src="js/steeze.js"></script>
     <script src="js/picnic.js"></script>
     <script src="js/freshers.js"></script>
     <script src="js/temptation.js"></script>

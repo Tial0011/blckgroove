@@ -1,31 +1,35 @@
 (() => {
-  const trigger = document.querySelector('[data-picnic-open]');
+  const trigger = document.querySelector('[data-steeze-open]');
   if (!trigger) return;
 
   const photos = [
-    'WhatsApp Image 2026-09-27 at 07.49.20.jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.20 (1).jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.20 (2).jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.21.jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.21 (1).jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.19.jpeg',
-    'WhatsApp Image 2026-09-27 at 07.49.19 (1).jpeg',
-  ];
+    "WhatsApp Image 2026-09-22 at 16.36.47.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.49.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.44 (1).jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.44.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.45.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.46 (1).jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.46.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.47 (1).jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.48 (1).jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.48.jpeg",
+    "WhatsApp Image 2026-09-22 at 16.36.49 (1).jpeg"
+];
   const dialog = document.createElement('dialog');
-  dialog.id = 'picnic-memories';
+  dialog.id = 'steeze-memories';
   dialog.className = 'picnic';
-  dialog.setAttribute('aria-labelledby', 'picnic-title');
+  dialog.setAttribute('aria-labelledby', 'steeze-title');
   dialog.innerHTML = `
-    <header class="picnic__bar"><span>THE BLCKGROOVE ARCHIVE / 07</span><button type="button" class="picnic__close" aria-label="Close G4 Picnic memories" autofocus>CLOSE &times;</button></header>
+    <header class="picnic__bar"><span>THE BLCKGROOVE ARCHIVE / 08</span><button type="button" class="picnic__close" aria-label="Close Steeze After Stress memories" autofocus>CLOSE &times;</button></header>
     <div class="picnic__content">
-      <p class="picnic__eyebrow">GARRI ULTIMATE HANGOUT</p>
-      <h2 id="picnic-title">G4 PICNIC<span>. </span></h2>
+      <p class="picnic__eyebrow">JULY 2026 / ONDO CITY</p>
+      <h2 id="steeze-title">STEEZE AFTER STRESS<span>. </span></h2>
       <p class="picnic__intro">Good company. Unforgettable moments.</p>
       <figure class="picnic__film">
         <div class="picnic__player">
-          <video playsinline preload="none" poster="assets/images/g4-picnic-poster.jpg" aria-label="G4 Picnic highlights, 30 seconds"><source src="assets/videos/g4-picnic-30s.mp4" type="video/mp4"></video>
-          <span class="picnic__film-tag">G4 / THE HIGHLIGHTS</span>
-          <button type="button" class="picnic__big-play" aria-label="Play picnic highlights"><span aria-hidden="true">▶</span><small>RELIVE IT</small></button>
+          <video playsinline preload="none" poster="assets/images/steeze-poster.jpg" aria-label="Steeze After Stress highlights, 30 seconds"><source src="assets/videos/steeze-after-stress-30s.mp4" type="video/mp4"></video>
+          <span class="picnic__film-tag">STEEZE / THE HIGHLIGHTS</span>
+          <button type="button" class="picnic__big-play" aria-label="Play Steeze After Stress highlights"><span aria-hidden="true">▶</span><small>RELIVE IT</small></button>
           <div class="picnic__controls">
             <button type="button" data-film-play aria-label="Play video">▶</button>
             <span class="picnic__time">0:00 / 0:30</span>
@@ -37,7 +41,7 @@
         <figcaption><span>RELIVE THE MOMENT</span><span>00:30 / THE FILM</span></figcaption>
       </figure>
       <div class="picnic__heading"><h3>The memory wall<span>.</span></h3><span>${String(photos.length).padStart(2, '0')} MOMENTS TO KEEP</span></div>
-      <div class="picnic__wall">${photos.map((file, index) => `<figure class="picnic__photo"><button type="button" data-picnic-photo="${index}" aria-label="View G4 Picnic photo ${index + 1} in full"><img src="assets/images/${file}" alt="G4 Picnic memory ${index + 1}" loading="lazy" decoding="async"><span class="picnic__photo-hint">VIEW PHOTO ↗</span></button><figcaption>G4 PICNIC <span>${String(index + 1).padStart(2, '0')}</span></figcaption></figure>`).join('')}</div>
+      <div class="picnic__wall">${photos.map((file, index) => `<figure class="picnic__photo"><button type="button" data-steeze-photo="${index}" aria-label="View Steeze After Stress photo ${index + 1} in full"><img src="assets/images/${file}" alt="Steeze After Stress memory ${index + 1}" loading="lazy" decoding="async"><span class="picnic__photo-hint">VIEW PHOTO ↗</span></button><figcaption>STEEZE AFTER STRESS <span>${String(index + 1).padStart(2, '0')}</span></figcaption></figure>`).join('')}</div>
       <p class="picnic__ending">Same people. A thousand memories.</p>
     </div>`;
   document.body.append(dialog);
@@ -46,7 +50,7 @@
 
   const viewer = document.createElement('dialog');
   viewer.className = 'picnic-viewer';
-  viewer.setAttribute('aria-label', 'G4 Picnic full photo');
+  viewer.setAttribute('aria-label', 'Steeze After Stress full photo');
   viewer.innerHTML = `<button type="button" class="picnic-viewer__close" aria-label="Close full photo" autofocus>CLOSE &times;</button><button type="button" class="picnic-viewer__previous" aria-label="Previous photo">←</button><figure><img alt=""><figcaption aria-live="polite"></figcaption></figure><button type="button" class="picnic-viewer__next" aria-label="Next photo">→</button>`;
   document.body.append(viewer);
   let selected = 0;
@@ -54,13 +58,13 @@
   const showPhoto = index => {
     selected = (index + photos.length) % photos.length;
     viewer.querySelector('img').src = `assets/images/${photos[selected]}`;
-    viewer.querySelector('img').alt = `G4 Picnic memory ${selected + 1}`;
-    viewer.querySelector('figcaption').textContent = `G4 PICNIC / ${selected + 1} OF ${photos.length}`;
+    viewer.querySelector('img').alt = `Steeze After Stress memory ${selected + 1}`;
+    viewer.querySelector('figcaption').textContent = `STEEZE AFTER STRESS / ${selected + 1} OF ${photos.length}`;
   };
-  dialog.querySelectorAll('[data-picnic-photo]').forEach(button => button.addEventListener('click', () => {
+  dialog.querySelectorAll('[data-steeze-photo]').forEach(button => button.addEventListener('click', () => {
     photoOpener = button;
     video.pause();
-    showPhoto(Number(button.dataset.picnicPhoto));
+    showPhoto(Number(button.dataset.steezePhoto));
     viewer.showModal();
   }));
   viewer.querySelector('.picnic-viewer__close').addEventListener('click', () => viewer.close());
