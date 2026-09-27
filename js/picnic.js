@@ -8,6 +8,8 @@
     'WhatsApp Image 2026-09-27 at 07.49.20 (2).jpeg',
     'WhatsApp Image 2026-09-27 at 07.49.21.jpeg',
     'WhatsApp Image 2026-09-27 at 07.49.21 (1).jpeg',
+    'WhatsApp Image 2026-09-27 at 07.49.19.jpeg',
+    'WhatsApp Image 2026-09-27 at 07.49.19 (1).jpeg',
   ];
   const dialog = document.createElement('dialog');
   dialog.id = 'picnic-memories';
@@ -34,7 +36,7 @@
         <p class="picnic__status" role="status"></p>
         <figcaption><span>RELIVE THE MOMENT</span><span>00:30 / THE FILM</span></figcaption>
       </figure>
-      <div class="picnic__heading"><h3>The memory wall<span>.</span></h3><span>05 MOMENTS TO KEEP</span></div>
+      <div class="picnic__heading"><h3>The memory wall<span>.</span></h3><span>${String(photos.length).padStart(2, '0')} MOMENTS TO KEEP</span></div>
       <div class="picnic__wall">${photos.map((file, index) => `<figure class="picnic__photo"><button type="button" data-picnic-photo="${index}" aria-label="View G4 Picnic photo ${index + 1} in full"><img src="assets/images/${file}" alt="G4 Picnic memory ${index + 1}" loading="lazy" decoding="async"><span class="picnic__photo-hint">VIEW PHOTO ↗</span></button><figcaption>G4 PICNIC <span>${String(index + 1).padStart(2, '0')}</span></figcaption></figure>`).join('')}</div>
       <p class="picnic__ending">Same people. A thousand memories.</p>
     </div>`;

@@ -19,8 +19,8 @@
 .picnic__heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin: 40px 0 28px; padding-bottom: 16px; border-bottom: 1px solid #342a30; }
 .picnic h3 { font: 400 clamp(1.8rem, 3vw, 2.8rem)/1 var(--font-display); margin: 0; }
 .picnic__heading > span { color: #b9aeb5; }
-.picnic__wall { columns: 3; column-gap: 22px; padding: 8px; }
-.picnic__photo { break-inside: avoid; margin: 0 0 26px; padding: 8px 8px 12px; background: #e9e1d4; color: #453c38; transform: rotate(-2deg); }
+.picnic__wall { columns: 4; column-gap: 18px; padding: 8px; }
+.picnic__photo { break-inside: avoid; margin: 0 0 20px; padding: 6px 6px 10px; background: #e9e1d4; color: #453c38; transform: rotate(-2deg); }
 .picnic__photo:nth-child(even) { transform: rotate(2deg); }
 .picnic__photo img { width: 100%; height: auto; }
 .picnic__photo figcaption { display: flex; justify-content: space-between; padding-top: 12px; font-size: .55rem; letter-spacing: .1em; }
@@ -64,7 +64,7 @@
   .picnic__bar { padding: 8px 16px; }
   .picnic__bar > span { font-size: .5rem; }
   .picnic__content { padding: 24px 18px 32px; }
-  .picnic__wall { columns: 2; column-gap: 16px; }
+  .picnic__wall { columns: 2; column-gap: 16px; max-width: 420px; margin-inline: auto; padding-inline: 16px; }
   .picnic__heading { align-items: start; flex-direction: column; gap: 10px; }
   .picnic__film figcaption { font-size: .5rem; }
 }
